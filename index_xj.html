@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>督导统计分析平台</title>
+<!--框架css-->
+<link href="css/common_3.2.css" rel="stylesheet" type="text/css"/>
+<link href="css/qkyui3.2.css" rel="stylesheet" type="text/css"/>
+<link href="css/qkyui_theme_default.css" rel="stylesheet" type="text/css"/>
+<!--附加css-->
+<!--<link href="css/ydh.css" rel="stylesheet" type="text/css"/>-->
+<link href="css/dudao.css" rel="stylesheet" type="text/css"/>
+<!--公共js-->
+<script language="JavaScript" charset="utf-8" src="bil/jquery-1.9.1.min.js"></script>
+<script src="bil/echarts.common.min.js"></script>
+<script language="JavaScript" charset="utf-8" src="js/qky_ui3.2.js"></script>
+<script language="JavaScript" charset="utf-8" src="js/qkyui_cal_3.2.js"></script>
+<script src="js/tb_h5.js"></script>
+<!--插件js-->
+</head>
+<body class="newsbady">
+    <!--顶部-->
+    <div class="qky_header clear3">
+          <div class="hea_logo fl wd_22"><img src="images/top/logo2.png"></div>
+          <div class="hea_nav fl wd_50">
+              <a class="hea_navli t_c co_ff trn cur"><i class="appicon fz_40">&#xe600;</i><span class="iskuai wd_100 fz_12">基础数据分析</span></a>
+              <a class="hea_navli t_c co_ff trn"><i class="appicon fz_40">&#xe612;</i><span class="iskuai wd_100 fz_12">综合素质分析</span></a>
+              <a class="hea_navli t_c co_ff trn"><i class="appicon fz_40">&#xe633;</i><span class="iskuai wd_100 fz_12">学业水平分析</span></a>
+              <a class="hea_navli t_c co_ff mr0 trn"><i class="appicon fz_40">&#xe601;</i><span class="iskuai wd_100 fz_12">资产管理分析</span></a>
+          </div>
+          <div class="hea_info fr wd_28"><a>黔南市布依族苗族自治州</a><a>机构</a><a>王小明</a></div> 
+    </div>
+
+
+    <!--中部-->
+    <div class="qky_main clear3">
+      <div class="left_box fl wd_16">
+      	<div class="lr_tit co_79 fz_24 fz_we"><i class="appicon mr10 fz_30">&#xe600;</i>基础数据分析</div>
+        <ul class="left_meun">
+            <li class="clear3 cur"><a><em></em><span class="fl">自治州教育数据概览</span></a></li>
+            <li class="clear3"><a><em></em><span class="fl">适龄入学人口情况</span></a></li>
+            <li class="clear3"><a><em></em><span class="fl">学生数据监测分析</span></a></li>
+            <li class="clear3"><a><em></em><span class="fl">教师数据监测分析</span></a></li>
+        </ul>
+      </div>
+      
+      <div class="right_box fr wd_82">
+          <div class="lr_tit co_79 fz_24 fz_we">都匀市教育数据 <a class="qkybut ba_ye fr co_ff mt8 brra_4" href="index.html"><i class="qkyicon mr4">&#xe6ea;</i>返回</a></div>
+          <div class="fz_18 co_89 pa_tb10">都匀市教育数据[数据概览]</div>
+          <div class="clear3">
+              <div class="fl wd_70 box_b br_r br_eee po_r">
+                 
+                  <div class="map_xj clear3">
+                  <div class="xj_li jie"><label>文峰</label><span>街道</span></div>
+                  <div class="xj_li jie"><label>广惠</label><span>街道</span></div>
+                  <div class="xj_li zheng"><label>墨冲</label><span>镇</span></div>
+                  <div class="xj_li jie"><label>小围寨</label><span>街道</span></div>
+                  <div class="xj_li jie"><label>沙包堡</label><span>街道</span></div>
+                  <div class="xj_li zheng"><label>平浪</label><span>镇</span></div>
+                  <div class="xj_li jie"><label>毛尖</label><span>街道</span></div>
+                  <div class="xj_li zheng"><label>匀东</label><span>镇</span></div>
+                  <div class="xj_li jie"><label>绿茵湖</label><span>街道</span></div>
+                  <div class="xj_li xiang"><label>归兰水族</label><span>乡</span></div>
+                  </div>
+                  
+                  <div class="data_box clear3">
+                   <div class="fl mt26"><img src="images/sj.png"></div>
+                   <div class="fl wd_90">
+                       <div class="data_up clear3 co_ff">
+                           <i class="appicon fz_50 fl">&#xe606;</i>
+                           <div class="fl fz_20 ml16 lh26">
+                               <div>截止目前</div>
+                               <div>数据统计为：</div>
+                           </div>
+                       </div>
+                       <div class="data_down pa_tb20 pa_lr10">
+                            <ul class="pa_lr8 pb8">
+                                <li id="allschool">全州学校总数：1022所</li>
+                                <li id="gbschool">公办学校总数：1022所</li>
+                                <li id="mbschool">民办学校总数：1022所</li>
+                            </ul>
+                            <ul  class="br_t br_fff pa_lr8 pt8">
+                                <li id="allstuder">全州学生总数：0</li>
+                                <li id="sixstuder">男/女总数：10230/112345</li>
+                                <li id="ssstuder">少数民族学生总数：10230</li>
+                            </ul>
+                       </div>
+                   </div>
+                  </div>   
+              </div>
+              
+              <div class="right_data fr wd_28 po_r">
+                  <div class="clear3 wd_100">
+                      <label class="right_tips  co_gr brc_gr fz_we fl">区镇学校占比</label>
+                      <a class="qkybut hbg ba_bl co_ff fz_16 fr mr16 brra_4"><i class="appicon mr4">&#xe609;</i>导出</a>
+                  </div>
+                  <div class="data_zb" id="data_zb"></div>
+              </div>
+          </div>
+          
+          <div class="sj_tab br_t  br_eee mt20">
+              <div class="clear3 pt20">
+                <div class="tab_buts clear3 fl wd_88">
+                <a class="cur" ids="all">各地区学校总数</a>
+                <a ids="gb">公办学校总数</a>
+                <a ids="mb">民办学校总数</a>
+                <a ids="six">男女生总数</a>
+                <a ids="ss">少数民族学生总数</a>
+                </div>
+                <a class="qkybut hbg ba_bl co_ff fz_16 fr mr16 brra_4 mt8"><i class="appicon mr4">&#xe609;</i>导出</a>
+              </div>
+              <div class="sj_table" id="sj_table"></div>
+          </div>
+      </div>
+      
+    </div>
+
+
+<script>
+//模拟主数据 县名：公办数，民办数，男生数，女生数，少数民族数
+ var alldata={ 
+	 "瓮安县":[795,241,304184,280670,156249],
+	 "富泉市":[936,100,266609,234237,163856],
+	 "龙里县":[2178,102,547798,492565,168056],
+	 "贵定县":[1041,26,213136,198921,180982],
+	 "长顺县":[3005,95,783075,724091,437410],
+	 "惠水县":[1898,48,647125,343122,500958 ],
+	 "平塘县":[1399,79,570723,297090,262509],
+	 "都均县":[1911,14,627775,343318,532044 ],
+	 "罗甸县":[1554,9,519590,271228,336324 ],
+	 "独山县":[901,810,242549,368712,116989],
+	 "三都水族自治县":[788,199,208998,190190,134128],
+	 "荔波县":[1000,812,79961,520150,147563]
+	 };
+
+//辅助数据，根据主数据变化
+var zb_data={"公办学校":[0,"#5fb364"],"民办学校":[0,"#f4ad41"]};
+var all_sj={"瓮安县":0,"富泉市":0,"龙里县":0,"贵定县":0,"长顺县":0,"惠水县":0,"平塘县":0,"都均县":0,"罗甸县":0,"独山县":0,"三都水族自治县":0,"荔波县":0};
+var gb_sj={"瓮安县":0,"富泉市":0,"龙里县":0,"贵定县":0,"长顺县":0,"惠水县":0,"平塘县":0,"都均县":0,"罗甸县":0,"独山县":0,"三都水族自治县":0,"荔波县":0};
+var mb_sj={"瓮安县":0,"富泉市":0,"龙里县":0,"贵定县":0,"长顺县":0,"惠水县":0,"平塘县":0,"都均县":0,"罗甸县":0,"独山县":0,"三都水族自治县":0,"荔波县":0};
+var six_sj={"瓮安县":[0,0],"富泉市":[0,0],"龙里县":[0,0],"贵定县":[0,0],"长顺县":[0,0],"惠水县":[0,0],"平塘县":[0,0],"都均县":[0,0],"罗甸县":[0,0],"独山县":[0,0],"三都水族自治县":[0,0],"荔波县":[0,0]};
+var ss_sj={"瓮安县":0,"富泉市":0,"龙里县":0,"贵定县":0,"长顺县":0,"惠水县":0,"平塘县":0,"都均县":0,"罗甸县":0,"独山县":0,"三都水族自治县":0,"荔波县":0};
+
+$(function(){
+	/******上部地图行执行*****/
+	//赋值增加，得到全州的数据 并更改辅助数据
+	var qzdata=[0,0,0,0,0];
+	for(var key in alldata){
+		
+		qzdata[0]+=alldata[key][0];
+		qzdata[1]+=alldata[key][1];
+		qzdata[2]+=alldata[key][2];
+		qzdata[3]+=alldata[key][3];
+		qzdata[4]+=alldata[key][4];
+		
+		all_sj[key]=alldata[key][0]+alldata[key][1];
+		gb_sj[key]=alldata[key][0];
+		mb_sj[key]=alldata[key][1];
+		six_sj[key][0]=alldata[key][2];
+		six_sj[key][1]=alldata[key][3];
+		ss_sj[key]=alldata[key][4];
+	}
+	xr_mapdata("全州",qzdata);
+	map_li();
+	
+	/******下部按钮行执行*****/
+	xrsj("sj_table",all_sj,"                       （全部）学校总数");
+	tab_buts();
+	
+});
+//地图点击
+function map_li(){
+	$(".map_li").each(function(i) {
+        $(this).click(function(){
+			$(this).addClass("cur").siblings().removeClass("cur");
+			var txt=$(this).find("span").html();
+			xr_mapdata(txt,alldata[txt]);
+		});
+    });
+}
+
+//渲染地图点击后数据变化
+function xr_mapdata(text,data){
+	if(text=="三都水族自治县") text="三都县";
+	$("#allschool").html(text+"学校总数："+(data[0]+data[1])+"所");
+	$("#gbschool").html("公办学校总数："+data[0]+"所");
+	$("#mbschool").html("民办学校总数："+data[1]+"所");
+	$("#allstuder").html(text+"学生总数："+(data[2]+data[3])+"人");
+	$("#sixstuder").html("男/女总数："+data[2]+"/"+data[3]);
+	$("#ssstuder").html("少数民族学生总数："+data[0]+"人");
+	zb_data["公办学校"][0]=data[0];
+	zb_data["民办学校"][0]=data[1];
+	xrzb('data_zb',zb_data);//渲染公办民办学校占比
+}
+
+//按钮排点击时
+function tab_buts(){
+	$(".tab_buts a").each(function(i) {
+        $(this).click(function(){
+			var thisid=$(this).attr("ids");
+			$(this).addClass("cur").siblings().removeClass("cur");
+			if(thisid=="all") xrsj("sj_table",all_sj,"                      （全部）学校总数");
+			if(thisid=="gb") xrsj("sj_table",gb_sj,"                       （公办）学校总数");
+			if(thisid=="mb") xrsj("sj_table",mb_sj,"                       （民办）学校总数");
+			if(thisid=="six") xrsj_six("sj_table",six_sj,"     人数总数");
+			if(thisid=="ss") xrsj("sj_table",ss_sj,"      人数总数");
+		});
+    });
+}
+
+</script>
+
+</body>
+</html>
