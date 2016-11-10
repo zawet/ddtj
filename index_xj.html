@@ -47,22 +47,22 @@
       </div>
       
       <div class="right_box fr wd_82">
-          <div class="lr_tit co_79 fz_24 fz_we">都匀市教育数据 <a class="qkybut ba_ye fr co_ff mt8 brra_4" href="index.html"><i class="qkyicon mr4">&#xe6ea;</i>返回</a></div>
-          <div class="fz_18 co_89 pa_tb10">都匀市教育数据[数据概览]</div>
+          <div class="lr_tit co_79 fz_24 fz_we"><span class="xian"></span>教育数据 <a class="qkybut ba_ye fr co_ff mt8 brra_4" href="index.html"><i class="qkyicon mr4">&#xe6ea;</i>返回</a></div>
+          <div class="fz_18 co_89 pa_tb10"><span class="xian"></span>教育数据[数据概览]</div>
           <div class="clear3">
               <div class="fl wd_70 box_b br_r br_eee po_r">
                  
                   <div class="map_xj clear3">
-                  <div class="xj_li jie"><label>文峰</label><span>街道</span></div>
-                  <div class="xj_li jie"><label>广惠</label><span>街道</span></div>
-                  <div class="xj_li zheng"><label>墨冲</label><span>镇</span></div>
-                  <div class="xj_li jie"><label>小围寨</label><span>街道</span></div>
-                  <div class="xj_li jie"><label>沙包堡</label><span>街道</span></div>
-                  <div class="xj_li zheng"><label>平浪</label><span>镇</span></div>
-                  <div class="xj_li jie"><label>毛尖</label><span>街道</span></div>
-                  <div class="xj_li zheng"><label>匀东</label><span>镇</span></div>
-                  <div class="xj_li jie"><label>绿茵湖</label><span>街道</span></div>
-                  <div class="xj_li xiang"><label>归兰水族</label><span>乡</span></div>
+                  <!--<div class="xj_li jie"><label>文峰</label><span>街道</span></div>-->
+                  <!--<div class="xj_li jie"><label>广惠</label><span>街道</span></div>-->
+                  <!--<div class="xj_li zheng"><label>墨冲</label><span>镇</span></div>-->
+                  <!--<div class="xj_li jie"><label>小围寨</label><span>街道</span></div>-->
+                  <!--<div class="xj_li jie"><label>沙包堡</label><span>街道</span></div>-->
+                  <!--<div class="xj_li zheng"><label>平浪</label><span>镇</span></div>-->
+                  <!--<div class="xj_li jie"><label>毛尖</label><span>街道</span></div>-->
+                  <!--<div class="xj_li zheng"><label>匀东</label><span>镇</span></div>-->
+                  <!--<div class="xj_li jie"><label>绿茵湖</label><span>街道</span></div>-->
+                  <!--<div class="xj_li xiang"><label>归兰水族</label><span>乡</span></div>-->
                   </div>
                   
                   <div class="data_box clear3">
@@ -77,12 +77,12 @@
                        </div>
                        <div class="data_down pa_tb20 pa_lr10">
                             <ul class="pa_lr8 pb8">
-                                <li id="allschool">全州学校总数：1022所</li>
+                                <li id="allschool">全县学校总数：1022所</li>
                                 <li id="gbschool">公办学校总数：1022所</li>
                                 <li id="mbschool">民办学校总数：1022所</li>
                             </ul>
                             <ul  class="br_t br_fff pa_lr8 pt8">
-                                <li id="allstuder">全州学生总数：0</li>
+                                <li id="allstuder">全县学生总数：0</li>
                                 <li id="sixstuder">男/女总数：10230/112345</li>
                                 <li id="ssstuder">少数民族学生总数：10230</li>
                             </ul>
@@ -119,29 +119,107 @@
 
 
 <script>
-//模拟主数据 县名：公办数，民办数，男生数，女生数，少数民族数
- var alldata={ 
-	 "瓮安县":[795,241,304184,280670,156249],
-	 "富泉市":[936,100,266609,234237,163856],
-	 "龙里县":[2178,102,547798,492565,168056],
-	 "贵定县":[1041,26,213136,198921,180982],
-	 "长顺县":[3005,95,783075,724091,437410],
-	 "惠水县":[1898,48,647125,343122,500958 ],
-	 "平塘县":[1399,79,570723,297090,262509],
-	 "都均县":[1911,14,627775,343318,532044 ],
-	 "罗甸县":[1554,9,519590,271228,336324 ],
-	 "独山县":[901,810,242549,368712,116989],
-	 "三都水族自治县":[788,199,208998,190190,134128],
-	 "荔波县":[1000,812,79961,520150,147563]
-	 };
+//县名与编码对照表
+var xian={
+    '瓮安县':'wengan',
+    '富泉市':'fuquan',
+    '龙里县':'longli',
+    '贵定县':'guiding',
+    '长顺县':'changshun',
+    '惠水县':'huishui',
+    '平塘县':'pingtang',
+    '都均县':'dujun',
+    '罗甸县':'luodian',
+    '独山县':'dushan',
+    '三都水族':'sandu',
+    '荔波县':'libo'
+}
+//模拟主数据 县名：公办数，民办数，男生数，女生数，少数民族数,单位
+var dujun = {
+    "文峰": [90, 67, 6323, 8910, 70402,'街道'],
+    "广惠": [106, 61, 89000, 7342, 91647,'街道'],
+    "小围寨": [491, 288, 10082, 80547, 29504,'街道'],
+    "沙包堡": [114, 57, 18901, 9298, 19592,'街道'],
+    "绿茵湖": [700, 81, 52023, 11900, 60112,'街道'],
+    "墨冲": [519, 91, 37025, 38726, 18288,'镇'],
+    "平浪": [400, 21, 60623, 78440, 32172,'镇'],
+    "毛尖": [578, 41, 17675, 49997, 47667,'镇'],
+    "匀东": [356, 17, 49471, 60784, 38676,'镇'],
+    "归兰": [443, 9, 21161, 71462, 39688,'乡']
+};
+var wengan = {
+    "瓮水": [280, 18, 11423, 40799, 70106,'街道'],
+    "雍阳": [279, 29, 99100, 7231, 91341,'街道'],
+    "银盏": [881, 39, 20181, 90456, 28586,'镇'],
+    "江界河": [292, 20, 19001, 9187, 19282,'镇'],
+    "猴场": [1303, 0, 12123, 11789, 98811,'镇'],
+    "珠藏": [703, 48, 47125, 28615, 17539,'镇'],
+    "中坪": [491, 71, 70723, 398329, 71612,'镇'],
+    "平定营": [691, 69, 27775, 99886, 26909,'镇'],
+    "永和": [480, 34, 19571, 30673, 88164,'镇'],
+    "玉山": [592, 1, 11261, 11351, 99091,'镇'],
+    "天文": [148, 31, 97188, 7110, 79079,'镇'],
+    "岚关": [169, 12, 78190, 90527, 87262,'乡'],
+    "建中": [680, 18, 19519, 72611, 27996,'镇']
+};
+var fuquan = {
+    "龙昌": [680, 29, 11423, 38799, 70106,'镇'],
+    "凤山": [782, 29, 48100, 7231, 9341,'镇'],
+    "牛场": [881, 55, 10181, 90456, 28586,'镇'],
+    "道坪": [292, 20, 19801, 9187, 12282,'街道'],
+    "陆坪": [703, 16, 12123, 11789, 7811,'镇'],
+    "仙桥": [703, 48, 47125, 28615, 27539,'乡'],
+    "金山": [491, 71, 70723, 398329, 71612,'街道'],
+    "马场坪": [691, 69, 27775, 89886, 8909,'街道']
+};
+
+var longli = {
+    "龙山": [680, 29, 11423, 38799, 70106,'镇'],
+    "谷脚": [782, 29, 48100, 7231, 9341,'镇'],
+    "洗马": [881, 55, 10181, 90456, 28586,'镇'],
+    "羊场": [90, 67, 6323, 8910, 70402,'街道'],
+    "醒狮": [106, 61, 89000, 7342, 91647,'街道'],
+    "三元": [491, 288, 10082, 80547, 29504,'街道'],
+    "麻芝": [114, 57, 18901, 9298, 19592,'街道'],
+    "草原": [700, 81, 52023, 11900, 60112,'街道'],
+    "湾寨": [519, 91, 37025, 38726, 18288,'镇'],
+    "摆省": [400, 21, 60623, 78440, 32172,'镇'],
+    "水场": [703, 16, 12123, 11789, 7811,'镇'],
+    "哪嗙": [703, 48, 47125, 28615, 27539,'乡'],
+    "谷龙": [491, 71, 70723, 398329, 71612,'街道'],
+    "巴江坪": [691, 69, 27775, 89886, 8909,'街道']
+};
+//根据url的传参，获取对应县数据
+function getParameterByName(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return r[2];
+    return null;
+}
+var alldata=eval( getParameterByName('location'));
 
 //辅助数据，根据主数据变化
 var zb_data={"公办学校":[0,"#5fb364"],"民办学校":[0,"#f4ad41"]};
-var all_sj={"瓮安县":0,"富泉市":0,"龙里县":0,"贵定县":0,"长顺县":0,"惠水县":0,"平塘县":0,"都均县":0,"罗甸县":0,"独山县":0,"三都水族自治县":0,"荔波县":0};
-var gb_sj={"瓮安县":0,"富泉市":0,"龙里县":0,"贵定县":0,"长顺县":0,"惠水县":0,"平塘县":0,"都均县":0,"罗甸县":0,"独山县":0,"三都水族自治县":0,"荔波县":0};
-var mb_sj={"瓮安县":0,"富泉市":0,"龙里县":0,"贵定县":0,"长顺县":0,"惠水县":0,"平塘县":0,"都均县":0,"罗甸县":0,"独山县":0,"三都水族自治县":0,"荔波县":0};
-var six_sj={"瓮安县":[0,0],"富泉市":[0,0],"龙里县":[0,0],"贵定县":[0,0],"长顺县":[0,0],"惠水县":[0,0],"平塘县":[0,0],"都均县":[0,0],"罗甸县":[0,0],"独山县":[0,0],"三都水族自治县":[0,0],"荔波县":[0,0]};
-var ss_sj={"瓮安县":0,"富泉市":0,"龙里县":0,"贵定县":0,"长顺县":0,"惠水县":0,"平塘县":0,"都均县":0,"罗甸县":0,"独山县":0,"三都水族自治县":0,"荔波县":0};
+var all_sj={};
+var gb_sj={};
+var mb_sj={};
+var ss_sj={};
+var six_sj={};
+var square={};
+for (var items in alldata){
+    all_sj[items] = 0;
+    gb_sj[items] = 0;
+    mb_sj[items] = 0;
+    ss_sj[items] = 0;
+    six_sj[items] = [0,0];
+    square[items] = alldata[items][5];
+}
+//var zb_data={"公办学校":[0,"#5fb364"],"民办学校":[0,"#f4ad41"]};
+//var all_sj={"文峰":0,"广惠":0,"小围寨":0,"沙包堡":0,"绿茵湖":0,"墨冲":0,"平浪":0,"毛尖":0,"匀东":0,"归兰":0};
+//var gb_sj={"文峰":0,"广惠":0,"小围寨":0,"沙包堡":0,"绿茵湖":0,"墨冲":0,"平浪":0,"毛尖":0,"匀东":0,"归兰":0};
+//var mb_sj={"文峰":0,"广惠":0,"小围寨":0,"沙包堡":0,"绿茵湖":0,"墨冲":0,"平浪":0,"毛尖":0,"匀东":0,"归兰":0};
+//var six_sj={"文峰":[0,0],"广惠":[0,0],"小围寨":[0,0],"沙包堡":[0,0],"绿茵湖":[0,0],"墨冲":[0,0],"平浪":[0,0],"毛尖":[0,0],"匀东":[0,0],"归兰":[0,0]};
+//var ss_sj={"文峰":0,"广惠":0,"小围寨":0,"沙包堡":0,"绿茵湖":0,"墨冲":0,"平浪":0,"毛尖":0,"匀东":0,"归兰":0};
 
 $(function(){
 	/******上部地图行执行*****/
@@ -162,14 +240,38 @@ $(function(){
 		six_sj[key][1]=alldata[key][3];
 		ss_sj[key]=alldata[key][4];
 	}
-	xr_mapdata("全州",qzdata);
+    titleChange();
+	xr_mapdata("全县",qzdata);
 	map_li();
 	
 	/******下部按钮行执行*****/
 	xrsj("sj_table",all_sj,"                       （全部）学校总数");
 	tab_buts();
-	
+    appendDiv(square);
 });
+//标题更新
+function titleChange() {
+    for (var key in xian) {
+        if(xian[key]==getParameterByName('location')){
+            $(".xian").text(key);
+        }
+    }
+}
+//方块内容更新
+function appendDiv(square) {
+    var color='jie';
+    for (var key in square) {
+        if(square[key]=='街道'){
+            color='jie'
+        }else if(square[key]=='镇'){
+            color='zheng'
+        }else{
+            color='xiang'
+        }
+        $(".map_xj").append('<div class="xj_li '+color+'"><label>' + key + '</label><span>' + square[key] + '</span></div>');
+    }
+}
+
 //地图点击
 function map_li(){
 	$(".map_li").each(function(i) {
