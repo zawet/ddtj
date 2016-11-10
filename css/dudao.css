@@ -88,6 +88,7 @@
 .data_down ul li{ line-height:32px;}
 
 .data_zb{ height:364px;}
+.data_zb2{ height:468px;}
 
 
 .tab_buts a{ display:block; float:left; width:20%; border-bottom:1px solid #eb494b; padding:12px 0; color:#eb4849; font-size:18px; text-align:center;}
@@ -105,5 +106,43 @@
 .map_xj .xj_li:hover{ background:#305157;}
 
 
-		
+.rx_info{ background:#fcfcfc;}
+.rx_tab{ height:450px;}	
+
+.stu_numbox{ width:100%; padding:30px 0 60px;}	
+.stu_numli{ background:#784a8e; border-radius:6px; color:#fff; width:23.5%; margin-right:2%;}
+.up_tit{ background:#58286e; padding:6px 18px; border-radius:6px 6px 0 0;}
+.up_tit i{ top:-14px; right:6px;}
+.up_tit label{ display:block;font-size:20px; margin-bottom:6px; }
+.up_tit span{ display:block; opacity:0.5;font-size:18px;}
+.down_num{padding:8px 18px;}
+.down_num label{ font-size:56px; font-weight:bold;}
+.down_num span{ font-size:18px;}
+
+.stu_numli.high{ background:#ec494c;}
+.stu_numli.high .up_tit{ background:#e43e41;}
+.stu_numli.middle{ background:#ffaa3d;}
+.stu_numli.middle .up_tit{ background:#f99e34;}
+.stu_numli.primary{ background:#14b8d4;}
+.stu_numli.primary .up_tit{ background:#11abcc;}
+
+.nj_zb{ height:380px;}
+.lq_tj{ height:380px;}
+
+.tea_numbox{ width:100%; margin-bottom:40px;}
+.tea_numli{ height:100px; color:#fff; background:#784a8e;}
+.tea_numli i{ position:absolute; top:2px; left:10px; color:#6a3d80; font-size:100px;}
+.tea_numli em{ font-size:16px; color:#ffaa3d; display:block; padding:32px 0 2px 52px; font-weight:bold; }
+.tea_numli b{ font-size:21px; display:block; padding-left:52px;}
+.tea_numli label{ font-size:60px; display:inline-block; padding-top:20px; padding-left:10px;}
+.tea_numli span{ font-size:21px;display:inline-block}
+.tea_numli.all{ background:#ffaa3d; box-sizing:border-box; border-right:15px solid #ff9712;}
+.tea_numli.all i{ color:#ff9712;}
+.tea_numli.all em{ color:#9b4ec0; font-size:26px; padding:24px 0 2px 30px;}
+.tea_numli.all b{ padding-left:30px;}
+
+.tea_tab{ height:340px;}
+
+
+
 
