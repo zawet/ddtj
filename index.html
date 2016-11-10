@@ -52,18 +52,18 @@
               <div class="right_map fl wd_70 box_b br_r br_eee po_r">
                   <label class="right_tips po_ab">县市地域分布</label>
                   <div class="map_box">
-                      <a class="map_li wengan"><img src="images/map/瓮安县.png"><span>瓮安县</span><i class="appicon">&#xe615;</i></a>
-                      <a class="map_li fuquan"><img src="images/map/富泉市.png"><span>富泉市</span><i class="appicon">&#xe615;</i></a>
-                      <a class="map_li longli"><img src="images/map/龙里县.png"><span>龙里县</span><i class="appicon">&#xe615;</i></a>
-                      <a class="map_li guiding"><img src="images/map/贵定县.png"><span>贵定县</span><i class="appicon">&#xe615;</i></a>
-                      <a class="map_li changshun"><img src="images/map/长顺县.png"><span>长顺县</span><i class="appicon">&#xe615;</i></a>
-                      <a class="map_li huishui"><img src="images/map/惠水县.png"><span>惠水县</span><i class="appicon">&#xe615;</i></a>
-                      <a class="map_li pingtang"><img src="images/map/平塘县.png"><span>平塘县</span><i class="appicon">&#xe615;</i></a>
-                      <a class="map_li dujun"><img src="images/map/都均县.png"><span>都均县</span><i class="appicon">&#xe615;</i></a>
-                      <a class="map_li luodian"><img src="images/map/罗甸县.png"><span>罗甸县</span><i class="appicon">&#xe615;</i></a>
-                      <a class="map_li dushan"><img src="images/map/独山县.png"><span>独山县</span><i class="appicon">&#xe615;</i></a>
-                      <a class="map_li sandu"><img src="images/map/三都水族自治县.png"><span>三都水族自治县</span><i class="appicon">&#xe615;</i></a>
-                      <a class="map_li libo"><img src="images/map/荔波县.png"><span>荔波县</span><i class="appicon">&#xe615;</i></a>
+                      <a class="map_li wengan" id="wengan"><img src="images/map/瓮安县.png"><span>瓮安县</span><i class="appicon">&#xe615;</i></a>
+                      <a class="map_li fuquan" id="fuquan"><img src="images/map/富泉市.png"><span>富泉市</span><i class="appicon">&#xe615;</i></a>
+                      <a class="map_li longli" id="longli"><img src="images/map/龙里县.png"><span>龙里县</span><i class="appicon">&#xe615;</i></a>
+                      <a class="map_li guiding" id="guiding"><img src="images/map/贵定县.png"><span>贵定县</span><i class="appicon">&#xe615;</i></a>
+                      <a class="map_li changshun" id="changshun"><img src="images/map/长顺县.png"><span>长顺县</span><i class="appicon">&#xe615;</i></a>
+                      <a class="map_li huishui" id="huishui"><img src="images/map/惠水县.png"><span>惠水县</span><i class="appicon">&#xe615;</i></a>
+                      <a class="map_li pingtang" id="pingtang"><img src="images/map/平塘县.png"><span>平塘县</span><i class="appicon">&#xe615;</i></a>
+                      <a class="map_li dujun" id="dujun"><img src="images/map/都均县.png"><span>都均县</span><i class="appicon">&#xe615;</i></a>
+                      <a class="map_li luodian" id="luodian"><img src="images/map/罗甸县.png"><span>罗甸县</span><i class="appicon">&#xe615;</i></a>
+                      <a class="map_li dushan" id="dushan"><img src="images/map/独山县.png"><span>独山县</span><i class="appicon">&#xe615;</i></a>
+                      <a class="map_li sandu" id="sandu"><img src="images/map/三都水族自治县.png"><span>三都水族自治县</span><i class="appicon">&#xe615;</i></a>
+                      <a class="map_li libo" id="libo"><img src="images/map/荔波县.png"><span>荔波县</span><i class="appicon">&#xe615;</i></a>
                   </div>
                   
                   <div class="co_ye4 pa_20 mt10">注明：在地图双击区县区域，可以查看镇级维度统计</div>
@@ -182,7 +182,8 @@ function map_li(){
 			xr_mapdata(txt,alldata[txt]);
 		});
 		$(this).dblclick(function(){
-			window.location.href="index_xj.html"; 
+            var locationID=$(this).attr('id')
+			window.location.href="index_xj.html?location="+locationID;
 		});
     });
 }
