@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>督导统计分析平台</title>
+<!--框架css-->
+<link href="css/common_3.2.css" rel="stylesheet" type="text/css"/>
+<link href="css/qkyui3.2.css" rel="stylesheet" type="text/css"/>
+<link href="css/qkyui_theme_default.css" rel="stylesheet" type="text/css"/>
+<!--附加css-->
+<!--<link href="css/ydh.css" rel="stylesheet" type="text/css"/>-->
+<link href="css/dudao.css" rel="stylesheet" type="text/css"/>
+<!--公共js-->
+<script language="JavaScript" charset="utf-8" src="bil/jquery-1.9.1.min.js"></script>
+<script src="bil/echarts.common.min.js"></script>
+<script language="JavaScript" charset="utf-8" src="js/qky_ui3.2.js"></script>
+<script src="js/tb_h5.js"></script>
+<!--插件js-->
+</head>
+<body class="newsbady">
+    <!--顶部-->
+    <div class="qky_header clear3">
+          <div class="hea_logo fl wd_22"><img src="images/top/logo2.png"></div>
+          <div class="hea_nav fl wd_50">
+              <a class="hea_navli t_c co_ff trn cur"><i class="appicon fz_40">&#xe600;</i><span class="iskuai wd_100 fz_12">基础数据分析</span></a>
+              <a class="hea_navli t_c co_ff trn"><i class="appicon fz_40">&#xe612;</i><span class="iskuai wd_100 fz_12">综合素质分析</span></a>
+              <a class="hea_navli t_c co_ff trn"><i class="appicon fz_40">&#xe633;</i><span class="iskuai wd_100 fz_12">学业水平分析</span></a>
+              <a class="hea_navli t_c co_ff mr0 trn"><i class="appicon fz_40">&#xe601;</i><span class="iskuai wd_100 fz_12">资产管理分析</span></a>
+          </div>
+          <div class="hea_info fr wd_28"><a>黔南市布依族苗族自治州</a><a>机构</a><a>王小明</a></div> 
+    </div>
+
+
+    <!--中部-->
+    <div class="qky_main clear3">
+      <div class="left_box fl wd_16">
+      	<div class="lr_tit co_79 fz_24 fz_we"><i class="appicon mr10 fz_30">&#xe600;</i>基础数据分析</div>
+        <ul class="left_meun">
+            <li class="clear3"><a href="index.html"><em></em><span class="fl">自治州教育数据概览</span></a></li>
+            <li class="clear3 cur"><a href="index_rx.html"><em></em><span class="fl">适龄入学人口情况</span></a></li>
+            <li class="clear3"><a href="index_stufx.html"><em></em><span class="fl">学生数据监测分析</span></a></li>
+            <li class="clear3"><a href="index_teafx.html"><em></em><span class="fl">教师数据监测分析</span></a></li>
+        </ul>
+      </div>
+      
+      <div class="right_box fr wd_82">
+          <div class="lr_tit  clear3">
+          	<span class="fl co_79 fz_24 fz_we">适龄入学人口情况</span>
+            <div class="qkysel wd_22 mt10 fr">
+               <div class="selshow box_b wd_100 type2  br_ddd">
+                 <a class="selectON dian3">2016-2017学年</a>
+                <div class="optionbox ba_ff ">
+                <a class="option trn dian3">2016-2017学年</a>
+                <a class="option trn dian3">2016-2017学年</a>
+                </div>
+               </div>
+             </div>
+          </div>
+          
+          <div class="clear3">
+              <div class="fl wd_66 box_b br_r br_eee po_r">
+                 <div class="rx_info clear3 pa_tb10">
+                     <div class="fl pl10 lh26">
+                         <div class="co_bl2  fz_18 fz_we mb8">黔南布依族苗族自治州</div>
+                         <div class="co_z9 fz_16">适龄总人数：<span id="slrx_all"></span>人，入学总人数：<span id="slrx_yirx"></span>人</div>
+                     </div>
+                     <a class="qkybut hbg ba_bl co_ff fz_16 fr mr16 brra_4 mt20"><i class="appicon mr4">&#xe609;</i>导出</a>
+                 </div>
+                 <div class="rx_tab" id="rx_tab"></div>
+                 
+              </div>
+              
+              <div class="right_data fr wd_32 po_r pt26">
+                  <div class="clear3 wd_100">
+                      <label class="right_tips  co_gr brc_gr fz_we fl">县市地区入学率</label>
+                      <a class="qkybut hbg ba_bl co_ff fz_16 fr mr16 brra_4"><i class="appicon mr4">&#xe609;</i>导出</a>
+                  </div>
+                  <div class="data_zb2" id="data_zb"></div>
+              </div>
+          </div>
+          
+          <div class="sj_tab br_t  br_eee mt20">
+              <div class="clear3 pt20">
+                <label class="right_tips  co_ye4 brc_ye4 fz_we fl">镇区适龄小孩统计表</label>
+                <a class="qkybut hbg ba_bl co_ff fz_16 fr mr16 brra_4 mt2"><i class="appicon mr4">&#xe609;</i>导出</a>
+              </div>
+              <table cellpadding="0" cellspacing="0" border="0" class="qkytable pa_tb16 noline_lr">
+              <tr><th>镇区</th><th>本地户籍适龄总人数</th><th>已入学人数</th><th>人数百分比</th></tr>                                                                       
+              <tr><td>文峰街道</td><td>5600</td><td>2800</td><td>50%</td></tr>
+              <tr><td>广惠街道</td><td>5600</td><td>2800</td><td>50%</td></tr>
+              <tr><td>小围寨街道</td><td>5600</td><td>2800</td><td>50%</td></tr>
+              <tr><td>沙包堡街道</td><td>5600</td><td>2800</td><td>50%</td></tr>
+              <tr><td>墨冲镇街道</td><td>5600</td><td>2800</td><td>50%</td></tr>
+              <tr><td>平浪镇街道</td><td>5600</td><td>2800</td><td>50%</td></tr>
+              <tr><td>毛尖镇街道</td><td>5600</td><td>2800</td><td>50%</td></tr>
+              <tr><td>匀东镇街道</td><td>5600</td><td>2800</td><td>50%</td></tr>
+              <tr><td>归兰水族乡</td><td>5600</td><td>2800</td><td>50%</td></tr>
+              </table>
+              
+                <div class="qkypage">
+                   <a href="#" class="no">上一页</a>
+                   <a href="#" class="cur">1</a>
+                   <a href="#">2</a>
+                   <a href="#">3</a>
+                   <a href="#">下一页</a>
+                  </div>
+              
+          </div>
+      </div>
+      
+    </div>
+
+
+<script>
+//县名：适龄入学总数，已经入学人数
+var rx_sj={
+"都匀市":[8249,7124],
+"福泉市":[4880,3999],
+"荔波县":[6066,5987],
+"贵定县":[3983,3089],
+"瓮安县":[4040,3167],
+"独山县":[2640,2321],
+"平塘县":[3178,2698],
+"罗甸县":[4111,3691],
+"长顺县":[5181,4879],
+"龙里县":[6347,4908],
+"惠水县":[6161,5001],
+"三都水族自治县":[5789,3978]
+};
+
+//县名：【【适龄入学总数，已经入学人数】，颜色】
+var rxzb_sj={
+"都匀市":[[8249,7124],"#5fb364"],
+"福泉市":[[4880,3999],"#ffaa3d"],
+"荔波县":[[6066,5987],"#56d25d"],
+"贵定县":[[3983,3089],"#3dbade"],
+"瓮安县":[[4040,3167],"#e8b253"],
+"独山县":[[2640,2321],"#fc7a23"],
+"平塘县":[[3178,2698],"#ee78f5"],
+"罗甸县":[[4111,3691],"#339156"],
+"长顺县":[[5181,4879],"#1590d6"],
+"龙里县":[[6347,4908],"#d22870"],
+"惠水县":[[6161,5001],"#e8b914"],
+"三都水族自治县":[[5789,3978],"#1583d0"]};
+
+$(function(){
+	qkysel();
+	
+	//组装数据
+	var all_sj=[0,0];
+	for(var key in rx_sj){
+		all_sj[0]+=rx_sj[key][0];
+		all_sj[1]+=rx_sj[key][1];
+	}
+	join_allrxsj(all_sj);
+	
+	//渲染数据表
+	xrrx('rx_tab',rx_sj);
+	xrrxzb('data_zb',rxzb_sj);
+	
+});
+
+function join_allrxsj(data){
+	$("#slrx_all").html(data[0]);
+	$("#slrx_yirx").html(data[1]);
+}
+</script>
+
+</body>
+</html>

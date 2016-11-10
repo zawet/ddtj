@@ -211,6 +211,20 @@ function qkychbox_sigle(){
     });
 }
 
+//单选整体（包含文字列）支持点击
+function qkychmain(){
+	$(".qkychmain").each(function(i) {
+        $(this).click(function(){
+			if($(this).find(".qkychbox.yuan").attr("ischoose")=="0"){
+				$(this).find(".qkychbox.yuan").addClass("cur").attr("ischoose","1");
+				$(this).siblings().find(".qkychbox.yuan").removeClass("cur").attr("ischoose","0");
+			}else{
+				$(this).find(".qkychbox.yuan").removeClass("cur").attr("ischoose","0");
+			}
+		});
+    });
+}
+
 //单选框指定id点击后执行新函数
 function qkychbox_sigle_id_fun(id,fun){
 	$(id+" .qkychbox.yuan").each(function(i) {

@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>督导统计分析平台</title>
+<!--框架css-->
+<link href="css/common_3.2.css" rel="stylesheet" type="text/css"/>
+<link href="css/qkyui3.2.css" rel="stylesheet" type="text/css"/>
+<link href="css/qkyui_theme_default.css" rel="stylesheet" type="text/css"/>
+<!--附加css-->
+<!--<link href="css/ydh.css" rel="stylesheet" type="text/css"/>-->
+<link href="css/dudao.css" rel="stylesheet" type="text/css"/>
+<!--公共js-->
+<script language="JavaScript" charset="utf-8" src="bil/jquery-1.9.1.min.js"></script>
+<script src="bil/echarts.common.min.js"></script>
+<script language="JavaScript" charset="utf-8" src="js/qky_ui3.2.js"></script>
+<script src="js/tb_h5.js"></script>
+<!--插件js-->
+</head>
+<body class="newsbady">
+    <!--顶部-->
+    <div class="qky_header clear3">
+          <div class="hea_logo fl wd_22"><img src="images/top/logo2.png"></div>
+          <div class="hea_nav fl wd_50">
+              <a class="hea_navli t_c co_ff trn cur"><i class="appicon fz_40">&#xe600;</i><span class="iskuai wd_100 fz_12">基础数据分析</span></a>
+              <a class="hea_navli t_c co_ff trn"><i class="appicon fz_40">&#xe612;</i><span class="iskuai wd_100 fz_12">综合素质分析</span></a>
+              <a class="hea_navli t_c co_ff trn"><i class="appicon fz_40">&#xe633;</i><span class="iskuai wd_100 fz_12">学业水平分析</span></a>
+              <a class="hea_navli t_c co_ff mr0 trn"><i class="appicon fz_40">&#xe601;</i><span class="iskuai wd_100 fz_12">资产管理分析</span></a>
+          </div>
+          <div class="hea_info fr wd_28"><a>黔南市布依族苗族自治州</a><a>机构</a><a>王小明</a></div> 
+    </div>
+
+
+    <!--中部-->
+    <div class="qky_main clear3">
+      <div class="left_box fl wd_16">
+      	<div class="lr_tit co_79 fz_24 fz_we"><i class="appicon mr10 fz_30">&#xe600;</i>基础数据分析</div>
+        <ul class="left_meun">
+            <li class="clear3"><a href="index.html"><em></em><span class="fl">自治州教育数据概览</span></a></li>
+            <li class="clear3 "><a href="index_rx.html"><em></em><span class="fl">适龄入学人口情况</span></a></li>
+            <li class="clear3 cur"><a href="index_stufx.html"><em></em><span class="fl">学生数据监测分析</span></a></li>
+            <li class="clear3"><a href="index_teafx.html"><em></em><span class="fl">教师数据监测分析</span></a></li>
+        </ul>
+      </div>
+      
+      <div class="right_box fr wd_82">
+          <div class="lr_tit  clear3">
+          	<span class="fl co_79 fz_24 fz_we">学生基础数据分析</span>
+            <div class="qkysel wd_18 mt10 fr ml18">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">某某全通教育学校</a>
+                    <div class="optionbox ba_ff " id="sch">
+                        <a class="option trn dian3">某某学校</a>
+                        <a class="option trn dian3">某某中学</a>
+                    </div>
+                </div>
+            </div>
+            <div class="qkysel wd_14 mt10 fr ml18">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">选择乡镇</a>
+                    <div class="optionbox ba_ff " id="xz">
+                        <a class="option trn dian3">2016-2017学年</a>
+                        <a class="option trn dian3">2016-2017学年</a>
+                    </div>
+                </div>
+            </div>
+            <div class="qkysel wd_12 mt10 fr">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">选择区县</a>
+                    <div class="optionbox ba_ff " id="xj">
+                        <a class="option trn dian3">2016-2017学年</a>
+                        <a class="option trn dian3">2016-2017学年</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="clear3 stu_numbox">
+              <div class="stu_numli fl">
+                  <div class="up_tit po_r"><label>学校学生人数</label><span>Total</span><i class="appicon po_ab_r co_ye fz_50">&#xe68a;</i></div>
+                  <div class="down_num"><label id="all_stunum">13600</label><span>(人)</span></div>
+              </div>
+              <div class="stu_numli fl high">
+                  <div class="up_tit"><label>高中部</label><span>High School</span></div>
+                  <div class="down_num"><label id="hi_stunum">2925</label><span>(人)</span></div>
+              </div>
+              <div class="stu_numli fl middle">
+                  <div class="up_tit"><label>初中部</label><span>Middle School</span></div>
+                  <div class="down_num"><label id="mi_stunum">3054</label><span>(人)</span></div>
+              </div>
+              <div class="stu_numli fl primary mr0">
+                  <div class="up_tit"><label>小学部</label><span>Primary School</span></div>
+                  <div class="down_num"><label id="pr_stunum">2986</label><span>(人)</span></div>
+              </div>
+          </div>
+          
+          <div class="clear3">
+              <div class="fl wd_54 pa_lr16 box_b">
+              	<label class="right_tips  co_ye4 brc_ye4 fz_we pa_lr18">年级人数占比</label>
+                <div class="nj_zb" id="nj_zb"></div>
+                <div class="t_c  mt18">
+                	<a class="qkybut hbg ba_bl co_ff fz_16 mr16 brra_4"><i class="appicon mr4">&#xe638;</i>全屏</a>
+                    <a class="qkybut hbg ba_bl co_ff fz_16 brra_4"><i class="appicon mr4">&#xe609;</i>导出</a>
+                </div>
+                
+              </div>
+              <div class="fr wd_44 pa_lr16 box_b">
+                  <div class="clear3">
+                      <label class="right_tips  co_bl2 brc_bl2 fz_we fl pa_lr18">录取统计图</label>
+                      <div class="qkysel fr">
+                          <div class="qkychmain fl clear3" ids="p">
+                              <a class="qkychbox yuan trn mt8 fl cur" ischoose="1"><i class="qkyicon">&#xe7ee;</i></a>
+                              <label class="ml2 fl">小学升初中</label>
+                          </div>
+                          <div class="qkychmain fl clear3 ml16" ids="m">
+                              <a class="qkychbox yuan trn mt8 fl" ischoose="0"><i class="qkyicon">&#xe7ee;</i></a>
+                              <label class="ml2 fl">初中升高中</label>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="lq_tj" id="lq_tj"></div>
+                  <div class="t_c mt18">
+                	<a class="qkybut hbg ba_bl co_ff fz_16 mr16 brra_4"><i class="appicon mr4">&#xe638;</i>全屏</a>
+                    <a class="qkybut hbg ba_bl co_ff fz_16 brra_4"><i class="appicon mr4">&#xe609;</i>导出</a>
+                </div>
+              </div>
+          </div>
+        
+        
+          
+      </div>
+      
+    </div>
+
+<script src="js/data.js"></script>
+<script>
+var stu_sj={"高三":[360,"#ec494c"],"高二":[370,"#ec494c"],"高一":[380,"#ec494c"],"中三":[390,"#ffaa3d"],"中二":[360,"#ffaa3d"],"中一":[420,"#ffaa3d"],"小六":[450,"#3cc1d8"],"小五":[410,"#3cc1d8"],"小四":[360,"#3cc1d8"],"小三":[400,"#3cc1d8"],"小二":[360,"#3cc1d8"],"小一":[370,"#3cc1d8"]};
+
+var stu_sx_p={"直升":[50,"#14b8d4"],"普通生":[25,"#ffaa3d"],"择校生":[12.5,"#ec494c"],"自主招生":[12.5,"#784a8e"]};
+var stu_sx_m={"直升":[32,"#14b8d4"],"普通生":[30,"#ffaa3d"],"择校生":[22,"#ec494c"],"自主招生":[16,"#784a8e"]};
+
+$(function(){
+	qkysel();
+	qkychmain();
+	
+	//组装数据
+	var stunum=[0,0,0,0];
+	for(var key in stu_sj){
+		stunum[0]+=stu_sj[key][0];
+	}
+	stunum[1]=stu_sj["高三"][0]+stu_sj["高二"][0]+stu_sj["高一"][0];
+	stunum[2]=stu_sj["中三"][0]+stu_sj["中二"][0]+stu_sj["中一"][0];
+	stunum[3]=stu_sj["小六"][0]+stu_sj["小五"][0]+stu_sj["小四"][0]+stu_sj["小三"][0]+stu_sj["小二"][0]+stu_sj["小一"][0];
+	join_data(stunum);
+	
+	//渲染数据表
+	xrstusj("nj_zb",stu_sj);
+	xrstusx("lq_tj",stu_sx_p);
+	
+	//点击转换
+	$(".qkychmain").each(function(i) {
+        $(this).click(function(){
+			if($(this).attr("ids")=="p") xrstusx("lq_tj",stu_sx_p);
+			if($(this).attr("ids")=="m") xrstusx("lq_tj",stu_sx_m);
+		});
+    });
+	
+	
+});
+
+function join_data(data){
+	$("#all_stunum").html(data[0]);
+	$("#hi_stunum").html(data[1]);
+	$("#mi_stunum").html(data[2]);
+	$("#pr_stunum").html(data[3]);	
+}
+
+</script>
+
+</body>
+</html>

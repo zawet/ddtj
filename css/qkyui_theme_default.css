@@ -11,7 +11,7 @@
 
 /***********文字颜色风格**********/
 .co_bl{ color:#549fc9!important;}/*蓝*/
-.co_bl2{ color:#e0e7f6 !important;}/*蓝2（淡）*/
+.co_bl2{ color:#14b8d4 !important;}/*蓝2（淡）*/
 .co_sbl{ color:#3e4659 !important;}/*超深蓝*/
 .co_ye{ color:#ed9c42!important;}/*黄*/
 .co_ye2{ color:#7f643e!important;}/*黄2（淡）*/
@@ -25,7 +25,7 @@
 
 /***********背景颜色风格**********/
 .ba_bl{ background:#549fc9 !important;}/*蓝*/
-.ba_bl2{ background:#e0e7f6 !important;}/*蓝2（淡）*/
+.ba_bl2{ background:#14b8d4 !important;}/*蓝2（淡）*/
 .ba_sbl{ background:#3e4659 !important;}/*蓝2（淡）*/
 .ba_ye{ background:#ed9c42!important;}/*黄*/
 .ba_ye2{ background:#7f643e!important;}/*黄2（淡）*/
@@ -39,7 +39,7 @@
 
 /***********边颜色**********/
 .brc_bl{ border-color:#549fc9 !important;}/*蓝*/
-.brc_bl2{ border-color:#e0e7f6 !important;}/*蓝2（淡）*/
+.brc_bl2{ border-color:#14b8d4 !important;}/*蓝2（淡）*/
 .brc_sbl{ border-color:#3e4659 !important;}/*蓝2（淡）*/
 .brc_ye{ border-color:#ed9c42!important;}/*黄*/
 .brc_ye2{ border-color:#7f643e!important;}/*黄2（淡）*/
@@ -73,7 +73,7 @@
 .qkysel .selshow.text textarea{color:#666;} 
 .qkysel .optionbox{ border:1px solid #eee;}
 .qkysel .optionbox a.option{color:#777; }
-.qkysel .optionbox a.option:hover{ background:#9ade55; color:#fff;}
+.qkysel .optionbox a.option:hover{ background:#aaa; color:#fff;}
 .qkysel .optionbox div.option a.twosel{  border-bottom:1px solid #eee;background: url(../images/public_icon/selicon.png) no-repeat 98% center #fff;}
 .qkysel .optionbox2 a.option2:hover{background:#9ade55; color:#fff;}
 
@@ -102,7 +102,7 @@
 
 /*分页颜色风格制定*/
 .qkypage a{ border:1px solid #ddd;background:#fff; color:#666; }
-.qkypage a.cur,.qkypage a:hover{ background:#9ade55; color:#fff; border-color:#9ade55;}
+.qkypage a.cur,.qkypage a:hover{ background:#ffaa3d; color:#fff; border-color:#ffaa3d;}
 .qkypage a.no{ color:#aaa; border-color: #eee; background:#fff;}
 
 
@@ -121,8 +121,8 @@
 /*自主复选框颜色风格制定*/
 .qkychbox{ background:#fff; border:1px solid #ccc;color:#fff;}
 .qkychbox i{color:#fff !important;}
-.qkychbox.cur{ background:#9ade55; border-color:#9ade55;}
-.qkychbox.type2.cur{ border-color:#9ade55; color:#9ade55; background:#fff;}
+.qkychbox.cur{ background:#549fc9; border-color:#549fc9;}
+.qkychbox.type2.cur{ border-color:#549fc9; color:#549fc9; background:#fff;}
 
 
 /*文本框颜色风格制定*/
@@ -161,10 +161,10 @@
 .qkynav_zu a:hover,.qkynav_zu a.cur{ background:#71bb2a;}
 
 /*表格基础颜色风格制定*/
-.qkytable th{ background:#998365; color:#fff;}
+.qkytable th{ background:#ffaa3d; color:#fff;}
 .qkytable .ba_gr th{ background:#9ade55; font-size:20px; font-weight:bold; }
-.qkytable tr.even td{ background:#fafafa;}
-.qkytable td{ color:#787878;  border-color:#eee; background:#fff}
+.qkytable tr.even td{ background:#fcfcfc;}
+.qkytable td{ color:#8e8e8e;  border-color:#eee; background:#fcfcfc}
 .qkytable td.one{ border-left:1px solid #eee;}
 .qkytable.td_ye td{ background:#fffdf6;}
 

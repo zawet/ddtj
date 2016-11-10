@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>督导统计分析平台</title>
+<!--框架css-->
+<link href="css/common_3.2.css" rel="stylesheet" type="text/css"/>
+<link href="css/qkyui3.2.css" rel="stylesheet" type="text/css"/>
+<link href="css/qkyui_theme_default.css" rel="stylesheet" type="text/css"/>
+<!--附加css-->
+<!--<link href="css/ydh.css" rel="stylesheet" type="text/css"/>-->
+<link href="css/dudao.css" rel="stylesheet" type="text/css"/>
+<!--公共js-->
+<script language="JavaScript" charset="utf-8" src="bil/jquery-1.9.1.min.js"></script>
+<script src="bil/echarts.common.min.js"></script>
+<script language="JavaScript" charset="utf-8" src="js/qky_ui3.2.js"></script>
+<script language="JavaScript" charset="utf-8" src="js/qkyui_cal_3.2.js"></script>
+<script src="js/tb_h5.js"></script>
+<!--插件js-->
+</head>
+<body class="newsbady">
+    <!--顶部-->
+    <div class="qky_header clear3">
+          <div class="hea_logo fl wd_22"><img src="images/top/logo2.png"></div>
+          <div class="hea_nav fl wd_50">
+              <a class="hea_navli t_c co_ff trn cur"><i class="appicon fz_40">&#xe600;</i><span class="iskuai wd_100 fz_12">基础数据分析</span></a>
+              <a class="hea_navli t_c co_ff trn"><i class="appicon fz_40">&#xe612;</i><span class="iskuai wd_100 fz_12">综合素质分析</span></a>
+              <a class="hea_navli t_c co_ff trn"><i class="appicon fz_40">&#xe633;</i><span class="iskuai wd_100 fz_12">学业水平分析</span></a>
+              <a class="hea_navli t_c co_ff mr0 trn"><i class="appicon fz_40">&#xe601;</i><span class="iskuai wd_100 fz_12">资产管理分析</span></a>
+          </div>
+          <div class="hea_info fr wd_28"><a>黔南市布依族苗族自治州</a><a>机构</a><a>王小明</a></div> 
+    </div>
+
+
+    <!--中部-->
+    <div class="qky_main clear3">
+      <div class="left_box fl wd_16">
+      	<div class="lr_tit co_79 fz_24 fz_we"><i class="appicon mr10 fz_30">&#xe600;</i>基础数据分析</div>
+        <ul class="left_meun">
+            <li class="clear3"><a href="index.html"><em></em><span class="fl">自治州教育数据概览</span></a></li>
+            <li class="clear3"><a href="index_rx.html"><em></em><span class="fl">适龄入学人口情况</span></a></li>
+            <li class="clear3"><a href="index_stufx.html"><em></em><span class="fl">学生数据监测分析</span></a></li>
+            <li class="clear3 cur"><a href="index_teafx.html"><em></em><span class="fl">教师数据监测分析</span></a></li>
+        </ul>
+      </div>
+      
+      <div class="right_box fr wd_82">
+          <div class="lr_tit  clear3">
+          	<span class="fl co_79 fz_24 fz_we">师资力量评估分析</span>
+            <div class="qkysel wd_18 mt10 fr ml18">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">某某全通教育学校</a>
+                    <div class="optionbox ba_ff " id="sch">
+                        <a class="option trn dian3">某某学校</a>
+                        <a class="option trn dian3">某某中学</a>
+                    </div>
+                </div>
+            </div>
+            <div class="qkysel wd_14 mt10 fr ml18">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">选择乡镇</a>
+                    <div class="optionbox ba_ff " id="xz">
+                        <a class="option trn dian3">2016-2017学年</a>
+                        <a class="option trn dian3">2016-2017学年</a>
+                    </div>
+                </div>
+            </div>
+            <div class="qkysel wd_12 mt10 fr">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">选择区县</a>
+                    <div class="optionbox ba_ff " id="xj">
+                        <a class="option trn dian3">2016-2017学年</a>
+                        <a class="option trn dian3">2016-2017学年</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+          <div class="tea_numbox clear3">
+              <div class="fl clear3 tea_numli wd_30 po_r all">
+                  <i class="appicon">&#xe603;</i>
+                  <div class="fl po_r"><em>Total</em><b>学校有:</b></div>
+                  <div class="fl po_r"><label>221</label><span>名教师</span></div>
+              </div>
+              <div class="fl clear3 tea_numli wd_35 po_r man">
+              	  <i class="appicon">&#xe605;</i>
+                  <div class="fl po_r"><em>Man</em><b>男教师:</b></div>
+                  <div class="fl po_r"><label>121</label><span>名</span></div>
+              </div>
+              <div class="fl clear3 tea_numli wd_35 po_r woman">
+              	  <i class="appicon fz_90">&#xe617;</i>
+                  <div class="fl po_r"><em>Woman</em><b>女教师:</b></div>
+                  <div class="fl po_r"><label>100</label><span>名</span></div>
+              </div>
+          </div>
+          
+          <div class="clear3">
+              <div class="fl wd_44">
+                  <label class="right_tips  co_red brc_red fz_we pa_lr20">教师职称按百分比统计</label>
+                  <div class="tea_tab" id="tea_zc"></div>
+                  <div class="t_c  mt18">
+                        <a class="qkybut hbg ba_bl co_ff fz_16 mr16 brra_4"><i class="appicon mr4">&#xe638;</i>全屏</a>
+                        <a class="qkybut hbg ba_bl co_ff fz_16 brra_4"><i class="appicon mr4">&#xe609;</i>导出</a>
+                  </div>
+              </div>
+              <div class="fr wd_54">
+                  <label class="right_tips  co_ye4 brc_ye4 fz_we pa_lr20">教学成果按件数统计</label>
+                  <div class="tea_tab" id="tea_cg"></div>
+                  <div class="t_c  mt18">
+                        <a class="qkybut hbg ba_bl co_ff fz_16 mr16 brra_4"><i class="appicon mr4">&#xe638;</i>全屏</a>
+                        <a class="qkybut hbg ba_bl co_ff fz_16 brra_4"><i class="appicon mr4">&#xe609;</i>导出</a>
+                   </div>
+              </div>
+          </div>
+          
+          <div class="clear3 mt20">
+              <div class="fl wd_44">
+                  <label class="right_tips  co_bl2 brc_bl2 fz_we pa_lr20">教师年龄情况</label>
+                  <div class="tea_tab" id="tea_nl"></div>
+                  <div class="t_c  mt18">
+                        <a class="qkybut hbg ba_bl co_ff fz_16 mr16 brra_4"><i class="appicon mr4">&#xe638;</i>全屏</a>
+                        <a class="qkybut hbg ba_bl co_ff fz_16 brra_4"><i class="appicon mr4">&#xe609;</i>导出</a>
+                  </div>
+              </div>
+              <div class="fr wd_54">
+                  <label class="right_tips  co_gr brc_gr fz_we pa_lr20">教师学历情况</label>
+                  <div class="tea_tab" id="tea_xl"></div>
+                  <div class="t_c  mt18">
+                        <a class="qkybut hbg ba_bl co_ff fz_16 mr16 brra_4"><i class="appicon mr4">&#xe638;</i>全屏</a>
+                        <a class="qkybut hbg ba_bl co_ff fz_16 brra_4"><i class="appicon mr4">&#xe609;</i>导出</a>
+                   </div>
+              </div>
+          </div>
+          
+      </div>
+      
+    </div>
+
+
+<script>
+var tea_zc={"初级职称":[50,"#ec494c"],"中级职称":[25,"#ffaa3d"],"高级职称":[25,"#784a8e"]};
+var tea_cg={"国外":36,"国家":37,"省级":38,"市级":40,"科组":37,"个人":46,"其他":49};
+var tea_nl={"0-17岁":10,"18-24岁":13,"25-29岁":28,"30-34岁":25,"35-39岁":20,"40岁以上":31};
+var tea_xl={"未知":[10,"#14b8d4"],"初中":[12,"#ffaa3d"],"高中":[18,"#ec494c"],"大专":[34,"#2b7deb"],"本科":[25,"#979393"],"硕士":[16,"#784a8e"],"博士":[6,"#5fb364"]};
+$(function(){
+	qkysel();
+	
+	xrstusx("tea_zc",tea_zc);
+	xrteacg("tea_cg",tea_cg,"级别","件数");
+	xrteanl("tea_nl",tea_nl);
+	xrteaxl("tea_xl",tea_xl);
+	
+	
+});
+
+</script>
+
+</body>
+</html>
