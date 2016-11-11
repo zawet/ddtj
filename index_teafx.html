@@ -136,14 +136,17 @@
       
     </div>
 
-
+<script src="js/data.js"></script>
 <script>
 var tea_zc={"初级职称":[50,"#ec494c"],"中级职称":[25,"#ffaa3d"],"高级职称":[25,"#784a8e"]};
 var tea_cg={"国外":36,"国家":37,"省级":38,"市级":40,"科组":37,"个人":46,"其他":49};
 var tea_nl={"0-17岁":10,"18-24岁":13,"25-29岁":28,"30-34岁":25,"35-39岁":20,"40岁以上":31};
 var tea_xl={"未知":[10,"#14b8d4"],"初中":[12,"#ffaa3d"],"高中":[18,"#ec494c"],"大专":[34,"#2b7deb"],"本科":[25,"#979393"],"硕士":[16,"#784a8e"],"博士":[6,"#5fb364"]};
 $(function(){
-	qkysel();
+	//下拉选择事件
+	join_option(xzs_sj,"#xj");
+	selup();
+	onebu();
 	
 	xrstusx("tea_zc",tea_zc);
 	xrteacg("tea_cg",tea_cg,"级别","件数");
@@ -152,6 +155,58 @@ $(function(){
 	
 	
 });
+
+//加入下拉选项
+function join_option(data,id,val){
+	var xjhtml="";
+	for(var xjkey in data){
+		if(val==1) xjhtml+='<a class="option trn dian3">'+data[xjkey]+'</a>';
+		else xjhtml+='<a class="option trn dian3">'+xjkey+'</a>';
+	}
+	$(id).html(xjhtml);
+}
+
+//下拉事件
+function selup(){
+	$(".qkysel").each(function(i) {
+        $(this).find(".selectON").on("click",function(){
+			$(this).parent().find(".optionbox").slideToggle(200);
+			$(this).parents(".qkysel").siblings().find(".optionbox").slideUp(100);
+		});
+	});
+}
+//县点击
+function onebu(){
+	$("#xj.optionbox .option").each(function(j) {
+		$(this).click(function(){
+			$(this).parent().slideUp(200);
+			$(this).parents(".selshow").find(".selectON").html($(this).html());
+			join_option(xzs_sj[$(this).html()],"#xz");
+			twobu($(this).html());
+		});
+	});
+	
+}
+//乡镇点击
+function twobu(thisxj){
+	$("#xz.optionbox .option").each(function(k) {
+		$(this).on("click",function(){
+			$(this).parent().slideUp(200);
+			$(this).parents(".selshow").find(".selectON").html($(this).html());
+			join_option(xzs_sj[thisxj][$(this).html()],"#sch",1);
+			threebu();
+		});
+	});
+}
+//学校点击
+function threebu(){
+	$("#sch.optionbox .option").each(function(k) {
+		$(this).on("click",function(){
+			$(this).parent().slideUp(200);
+			$(this).parents(".selshow").find(".selectON").html($(this).html());
+		});
+	});
+}
 
 </script>
 
