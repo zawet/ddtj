@@ -59,7 +59,7 @@ function xrsj(id,datas,dw){
 				nameGap:14,
 				axisLabel:{textStyle:{color:"#333"},formatter: function (value, index){
 					
-					if(value.length>=4&&value.length<=7){
+					if(value.length>=5&&value.length<=7){
 						return value[0]+value[1]+value[2]+value[3]+"\n"+value[4]+value[5]+value[6]
 					}else{
 						return value

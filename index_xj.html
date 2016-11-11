@@ -10,13 +10,11 @@
 <link href="css/qkyui3.2.css" rel="stylesheet" type="text/css"/>
 <link href="css/qkyui_theme_default.css" rel="stylesheet" type="text/css"/>
 <!--附加css-->
-<!--<link href="css/ydh.css" rel="stylesheet" type="text/css"/>-->
 <link href="css/dudao.css" rel="stylesheet" type="text/css"/>
 <!--公共js-->
 <script language="JavaScript" charset="utf-8" src="bil/jquery-1.9.1.min.js"></script>
 <script src="bil/echarts.common.min.js"></script>
 <script language="JavaScript" charset="utf-8" src="js/qky_ui3.2.js"></script>
-<script language="JavaScript" charset="utf-8" src="js/qkyui_cal_3.2.js"></script>
 <script src="js/tb_h5.js"></script>
 <!--插件js-->
 </head>
@@ -268,7 +266,7 @@ var libo = {
     "茂兰": [703, 80, 12003, 11289, 28811,'镇'],
     "小七孔": [303, 48, 17125, 20015, 17539,'镇'],
     "瑶山": [491, 71, 70723, 118329, 60012,'乡'],
-    "黎明关水": [191, 11, 70723, 118329, 40012,'乡'],
+    "黎明圣水": [191, 11, 70723, 118329, 40012,'乡'],
 };
 
 //根据url的传参，获取对应县数据
@@ -279,7 +277,7 @@ function getParameterByName(name) {
     return null;
 }
 var alldata=eval( getParameterByName('location'));
-console.log(alldata)
+//console.log(alldata)
 
 //辅助数据，根据主数据变化
 var zb_data={"公办学校":[0,"#5fb364"],"民办学校":[0,"#f4ad41"]};
@@ -352,7 +350,7 @@ function appendDiv(square) {
             color='xiang'
         }
         $(".map_xj").append('<div class="xj_li '+color+'"><label>' + key + '</label><span>' + square[key] + '</span></div>');
-        console.log(square[key])
+        //console.log(square[key])
     }
 }
 
