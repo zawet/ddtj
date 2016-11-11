@@ -147,6 +147,7 @@
 .h34{ margin:8px 0;}
 .qkychbox.h34{ margin-right:4px; display:block;}
 .qkychbox.yuan{ width:16px; height:16px; line-height:17px; border-radius:50%;}
+.qkychmain{ cursor:pointer;}
 
 /*文本框*/
 .qkytextarea{ width:100%; box-sizing:border-box;}
@@ -208,7 +209,7 @@
 /*表格基础样式*/
 .qkytable{ width:100%;}
 .qkytable th{ padding:8px 0; font-size:16px;}
-.qkytable td{text-align:center; height:56px; font-size:16px;border:1px solid; border-top:none; border-left:none;}
+.qkytable td{text-align:center; padding:10px 0; font-size:16px;border:1px solid; border-top:none; border-left:none;}
 .qkytable.noline td{ border:none !important;}
 .qkytable.noline_lr td{ border-right:none !important;}
 
