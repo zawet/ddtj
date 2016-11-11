@@ -66,7 +66,7 @@ function  qkysel(){
 function  qkysel_onlya(id){
 		$(id).each(function(i) {
 			$(this).find(".selectON").click(function(){
-				console.log($(this).html());
+				//console.log($(this).html());
 				$(this).next(".optionbox").first().slideToggle(200);
 			});
 			$(this).find(".optionbox a.option").each(function(j) {
