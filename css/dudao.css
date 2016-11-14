@@ -24,6 +24,8 @@
 .left_meun li em{ width:8px; height:8px; background:#fff; margin-right:12px; margin-top:8px; display:block; float:left; }
 .left_meun li.cur a,.left_meun li:hover a{ color:#f4ad41;}
 .left_meun li.cur em,.left_meun li:hover em{ display:block;background:#f4ad41;}
+.zibox{ display: block;}
+.yc_qing{ display:none;}
 
 .right_map{ height:400px;}
 .right_tips{ border-radius:34px; line-height:34px; height:34px; padding:0 10px; border:1px solid #15b8d4; color:#15b8d4; font-size:16px; display:inline-block;}
@@ -142,6 +144,15 @@
 .tea_numli.all b{ padding-left:30px;}
 
 .tea_tab{ height:340px;}
+
+.rcpl_sch{ height:450px;}
+.nj_zb{ height:380px;}
+.xs_pj{height:450px;}
+.selbut a{ display:block; float:left; padding:5px 10px; font-size:16px; color:#727272; margin-right:8px;}
+.selbut a{-webkit-transition: all 0.25s ease-out 0s;-moz-transition: all 0.25s ease-out 0s;transition: all 0.25s ease-out 0s;}
+.selbut a i{ display:none;}
+.selbut a:hover,.selbut a.cur{ background:#ffaa3d; color:#fff; border-radius:30px;}
+.selbut a:hover i,.selbut a.cur i{ display:inline-block;}
 
 
 

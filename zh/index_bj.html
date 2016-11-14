@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>督导统计分析平台</title>
+<!--框架css-->
+<link href="../css/common_3.2.css" rel="stylesheet" type="text/css"/>
+<link href="../css/qkyui3.2.css" rel="stylesheet" type="text/css"/>
+<link href="../css/qkyui_theme_default.css" rel="stylesheet" type="text/css"/>
+<!--附加css-->
+<link href="../css/dudao.css" rel="stylesheet" type="text/css"/>
+<!--公共js-->
+<script language="JavaScript" charset="utf-8" src="../bil/jquery-1.9.1.min.js"></script>
+<script src="../bil/echarts.common.min.js"></script>
+<script language="JavaScript" charset="utf-8" src="../js/qky_ui3.2.js"></script>
+<script language="JavaScript" charset="utf-8" src="../js/ddtj_sel.js"></script>
+<script src="../js/tb_h5.js"></script>
+<!--插件js-->
+</head>
+<body class="newsbady">
+    <!--顶部-->
+    <div class="qky_header clear3">
+          <div class="hea_logo fl wd_22"><img src="../images/top/logo2.png"></div>
+          <div class="hea_nav fl wd_50">
+              <a class="hea_navli t_c co_ff trn" href="../index.html"><i class="appicon fz_40">&#xe600;</i><span class="iskuai wd_100 fz_12">基础数据分析</span></a>
+              <a class="hea_navli t_c co_ff trn cur" href="index.html"><i class="appicon fz_40">&#xe612;</i><span class="iskuai wd_100 fz_12">综合素质分析</span></a>
+              <a class="hea_navli t_c co_ff trn" href="../xy/index.html"><i class="appicon fz_40">&#xe633;</i><span class="iskuai wd_100 fz_12">学业水平分析</span></a>
+              <a class="hea_navli t_c co_ff mr0 trn" href="../zc/index.html"><i class="appicon fz_40">&#xe601;</i><span class="iskuai wd_100 fz_12">资产管理分析</span></a>
+          </div>
+          <div class="hea_info fr wd_28"><a>黔南市布依族苗族自治州</a><a>机构</a><a>王小明</a></div> 
+    </div>
+
+
+    <!--中部-->
+    <div class="qky_main clear3">
+      <div class="left_box fl wd_16">
+      	<div class="lr_tit co_79 fz_24 fz_we"><i class="appicon mr10 fz_30">&#xe600;</i>综合素质分析</div>
+        <ul class="left_meun">
+            <li class="zhu cur"><a class="clear3"><em></em><span class="fl">评价分析</span></a></li>
+            <div class="pl16 zibox">
+            <li class="zi"><a href="index.html" class="clear3"><em></em><span class="fl">学校总体数据</span></a></li>
+            <li class="zi cur"><a href="index_bj.html" class="clear3"><em></em><span class="fl">班级个人数据</span></a></li>
+            </div>
+            <li class="clear3 zhu"><a class="clear3"><em></em><span class="fl">荣誉分析</span></a></li>
+            <div class="pl16 zibox yc_qing">
+            <li class="zi"><a href="index_ry.html" class="clear3"><em></em><span class="fl">荣誉数据统计</span></a></li>
+            </div>
+            
+
+        </ul>
+      </div>
+      
+      <div class="right_box fr wd_82">
+          <div class="lr_tit clear3 br_ddd">
+          	<span class="fl co_79 fz_24 fz_we">个人数据分析</span>
+            <div class="qkysel wd_18 mt10 fr ml18">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">某某全通教育学校</a>
+                    <div class="optionbox ba_ff " id="sch">
+                        <a class="option trn dian3">某某学校</a>
+                        <a class="option trn dian3">某某中学</a>
+                    </div>
+                </div>
+            </div>
+            <div class="qkysel wd_14 mt10 fr ml18">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">选择乡镇</a>
+                    <div class="optionbox ba_ff " id="xz">
+                        <a class="option trn dian3">2016-2017学年</a>
+                        <a class="option trn dian3">2016-2017学年</a>
+                    </div>
+                </div>
+            </div>
+            <div class="qkysel wd_12 mt10 fr">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">选择区县</a>
+                    <div class="optionbox ba_ff " id="xj">
+                        <a class="option trn dian3">2016-2017学年</a>
+                        <a class="option trn dian3">2016-2017学年</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+          <div class="mb16">
+          	<div class="clear3 ba_ee br_b br_ddd pa_tb8">
+            <label class="fl wd_10 fz_18 fz_we co_79 lh32 t_c">查看年级</label>
+            <div class="wd_90 selbut clear3">
+            <a class="cur"><i class="appicon mr4">&#xe604;</i>小一</a>
+            <a><i class="appicon mr4">&#xe604;</i>小二</a>
+            <a><i class="appicon mr4">&#xe604;</i>小三</a>
+            <a><i class="appicon mr4">&#xe604;</i>小四</a>
+            <a><i class="appicon mr4">&#xe604;</i>小五</a>
+            <a><i class="appicon mr4">&#xe604;</i>小六</a>
+            <a><i class="appicon mr4">&#xe604;</i>中一</a>
+            <a><i class="appicon mr4">&#xe604;</i>中二</a>
+            <a><i class="appicon mr4">&#xe604;</i>中三</a>
+            <a><i class="appicon mr4">&#xe604;</i>高一</a>
+            <a><i class="appicon mr4">&#xe604;</i>高二</a>
+            <a><i class="appicon mr4">&#xe604;</i>高三</a>
+            </div>
+            </div>
+            <div class="clear3 ba_fc br_b br_ddd pa_tb8"><div class="fl wd_10 lh32">&nbsp;</div>
+            <div class="wd_90  clear3 selbut">
+            <a class="cur"><i class="appicon mr4">&#xe604;</i>(1)班</a>
+            <a><i class="appicon mr4">&#xe604;</i>(2)班</a>
+            <a><i class="appicon mr4">&#xe604;</i>(3)班</a>
+            <a><i class="appicon mr4">&#xe604;</i>(4)班</a>
+            <a><i class="appicon mr4">&#xe604;</i>(5)班</a>
+            </div>
+            </div>
+          </div>
+          
+          <div class="clear3">
+              <div class="fl wd_64 br_r br_eee">
+                  <label class="right_tips  co_bl2 brc_bl2 fz_we pa_lr20">日常评价按月份统计</label>
+                  <div class="co_bl2 pa_16">班级按月加分/减分 统计情况</div>
+                  <div class="rcpl_sch" id="rcpl_sch"></div> 
+                  <div class="t_c  mt18">
+                	<a class="qkybut hbg ba_bl co_ff fz_16 mr16 brra_4"><i class="appicon mr4">&#xe638;</i>全屏</a>
+                    <a class="qkybut hbg ba_bl co_ff fz_16 brra_4"><i class="appicon mr4">&#xe609;</i>导出</a>
+                  </div>
+              </div>
+              <div class="fr wd_34">
+                  <label class="right_tips  co_ye brc_ye fz_we pa_lr20">学生评价按得分统计</label>
+                  <div class="co_ye pa_16">该班级下评价最终得分排名</div>   
+                  <div class="xs_pj" id="xs_pj"></div>
+                  <div class="t_c  mt18">
+                	<a class="qkybut hbg ba_bl co_ff fz_16 mr16 brra_4"><i class="appicon mr4">&#xe638;</i>全屏</a>
+                    <a class="qkybut hbg ba_bl co_ff fz_16 brra_4"><i class="appicon mr4">&#xe609;</i>导出</a>
+                  </div>
+              </div>
+          </div>
+            
+      </div>
+      
+    </div>
+
+<script src="../js/data.js"></script>
+<script>
+
+var rcpl_sch={
+	"1月":[10,-3],
+	"2月":[12,-6],
+	"3月":[18,-9],
+	"4月":[34,-14],
+	"5月":[25,-10],
+	"6月":[16,-6],
+	"7月":[6,-2],
+	"8月":[18,-7],
+	"9月":[34,-8],
+	"10月":[25,-9],
+	"11月":[16,-10],
+	"12月":[6,-5]
+  };
+  var xs_pj={
+	  "顾笠":52,
+	  "陈妮":59,
+	  "王自大":60,
+	  "任曦":62,
+	  "吴李":63,
+	  "何丽丽":64,
+	  "黄敏":68,
+	  "梁冬冬":70,
+	  "陈达明":76,
+	  "王楚":80,
+	  "何君君":85,
+	  "汪小明":90,
+	  };
+$(function(){
+	//下拉选择事件
+	join_option(xzs_sj,"#xj");
+	selup();
+	onebu();
+	
+	xrzh01("rcpl_sch",rcpl_sch);
+	xrzh03("xs_pj",xs_pj);
+	zhu();
+	
+});
+
+function zhu(){
+	$(".zhu").each(function(i) {
+        $(this).click(function(){
+			$(this).toggleClass("cur").next(".zibox").first().slideToggle(100);
+		});
+    });
+}
+
+</script>
+
+</body>
+</html>

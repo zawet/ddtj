@@ -467,4 +467,147 @@ function xrteaxl(id,datas){
 
         // 使用刚指定的配置项和数据显示图表。
         teaxl_Chart.setOption(teaxl_option);
-}		
+}	
+
+function xrzh01(id,datas){
+	var zh01_labels = new Array();
+	var zh01_values_z = new Array();
+	var zh01_values_f = new Array();
+	for(var key in datas){
+		zh01_labels.push(key);
+		zh01_values_z.push(datas[key][0]);
+		zh01_values_f.push(datas[key][1]);
+	}
+	 
+	//渲染表格（想看明白请看ECharts 3.0官方api） 
+	var zh01_Chart = echarts.init(document.getElementById(id));
+		zh01_option = {
+			tooltip : {
+				trigger: 'axis',
+				axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+					type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+				}
+			},
+			
+			grid: {
+				left: '3%',
+				right: '4%',
+				bottom: '6%',
+				top:'4%',
+				
+			},
+			yAxis : [
+				{
+					type : 'value',
+					splitLine:{show:false},
+					axisLabel:{show:true,textStyle:{color:"#333"}},
+					axisLine:{lineStyle:{color:"#13b8d4"}},
+				}
+			],
+			xAxis : [
+				{
+					type : 'category',
+					axisTick : {show: false},
+					axisLabel:{show:true,textStyle:{color:"#333",fontSize:16}},
+					axisLine:{show:true,lineStyle:{color:"#13b8d4"}},
+					data : zh01_labels
+				}
+			],
+			series : [
+				
+				{
+					name:'加分',
+					type:'bar',
+					stack: '总量',
+					barWidth:"60%",
+					label: {normal: {show: true,position:'top'}},
+					itemStyle:{normal:{color:'#13b8d4'}},
+					data:zh01_values_z
+				},
+				{
+					name:'减分',
+					type:'bar',
+					stack: '总量',
+					barWidth:"60%",
+					label: {normal: {show: true,position:'bottom'}},
+					itemStyle:{normal:{color:'#6adfe4'}},
+					data:zh01_values_f
+				}
+			]
+		};
+
+        // 使用刚指定的配置项和数据显示图表。
+        zh01_Chart.setOption(zh01_option);
+}	
+
+
+function xrzh02(id,datas){
+	var zh02_labels = new Array();
+	var zh02_values = new Array();
+	for(var key in datas){
+		zh02_labels.push(key);
+		zh02_values.push({value:datas[key][0],name:key,itemStyle:{normal:{color:datas[key][1]}}});
+	}
+	 
+	//渲染表格（想看明白请看ECharts 3.0官方api） 
+	var zh02_Chart = echarts.init(document.getElementById(id));
+		zh02_option = {
+			tooltip : {
+				trigger: 'item',
+				formatter: "{b} <br/>{a} : {d}%"
+			},
+			legend: {
+				x : 'center',
+				y : 'bottom',
+				data:zh02_labels
+			},
+			calculable : true,
+			series : [
+			   
+				{
+					name:'占比',
+					type:'pie',
+					radius : [30, 110],
+					center : ['50%', '50%'],
+					roseType : 'area',
+					data:zh02_values
+				}
+			]
+		};
+        // 使用刚指定的配置项和数据显示图表。
+        zh02_Chart.setOption(zh02_option);
+}
+
+function xrzh03(id,datas){
+	var zh03_labels = new Array();
+	var zh03_values = new Array();
+	for(var key in datas){
+		zh03_labels.push(key);
+		zh03_values.push(datas[key]);
+		
+	}
+	 
+	//渲染表格（想看明白请看ECharts 3.0官方api） 
+	var zh03_Chart = echarts.init(document.getElementById(id));
+		zh03_option= {
+			tooltip : {trigger:'axis',axisPointer :{type:'shadow'}},
+			
+			grid:{left: '4%',right: '0%',bottom: '0',top: '0%',containLabel: true},
+			xAxis:[{axisTick:{show:false},axisLabel:{show:false,lineStyle:{color:"#eee"}},axisLine:{show:false,lineStyle:{color:"#999"}},type:'value',splitLine:{show:false}}],
+			yAxis:[{axisLabel:{textStyle:{color:"#8e8e8e",fontSize:16}},axisLine:{show:false,lineStyle:{color:"#a4eea9"}},axisTick:{show:false,alignWithLabel:true},
+			type:'category',data:zh03_labels}],
+			series : [
+				{
+					name:'分数',
+					type:'bar',
+					data:zh03_values,
+					barWidth:"60%",
+					itemStyle:{normal:{color:"#ffaa3d"}},
+					label:{normal:{show:true,textStyle:{fontSize:14},position:"right"}}
+				}
+			]
+	};
+        // 使用刚指定的配置项和数据显示图表。
+        zh03_Chart.setOption(zh03_option);
+}
+	
