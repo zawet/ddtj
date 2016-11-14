@@ -161,7 +161,7 @@ var wengan = {
     "建中": [680, 18, 19519, 72611, 27996,'镇']
 };
 var fuquan = {
-    "龙昌": [680, 29, 11423, 38799, 70106,'镇'],
+    "龙昌": [680, 59, 31423, 38799, 70106,'镇'],
     "凤山": [782, 29, 48100, 7231, 9341,'镇'],
     "牛场": [881, 55, 10181, 90456, 28586,'镇'],
     "道坪": [292, 20, 19801, 9187, 12282,'街道'],
@@ -323,12 +323,12 @@ $(function(){
 	}
     titleChange();
 	xr_mapdata("全县",qzdata);
-	map_li();
 	
 	/******下部按钮行执行*****/
 	xrsj("sj_table",all_sj,"                       （全部）学校总数");
 	tab_buts();
     appendDiv(square);
+    map_li();
 });
 //标题更新
 function titleChange() {
@@ -356,11 +356,13 @@ function appendDiv(square) {
 
 //地图点击
 function map_li(){
-	$(".map_li").each(function(i) {
+	$(".xj_li").each(function(i) {
         $(this).click(function(){
 			$(this).addClass("cur").siblings().removeClass("cur");
-			var txt=$(this).find("span").html();
-			xr_mapdata(txt,alldata[txt]);
+            var name=$(this).find("label").text()
+			var txt=$(this).find("label").text()+$(this).find("span").text();
+            console.log(name+"----"+txt)
+			xr_mapdata(txt,alldata[name]);
 		});
     });
 }
@@ -373,7 +375,7 @@ function xr_mapdata(text,data){
 	$("#mbschool").html("民办学校总数："+data[1]+"所");
 	$("#allstuder").html(text+"学生总数："+(data[2]+data[3])+"人");
 	$("#sixstuder").html("男/女总数："+data[2]+"/"+data[3]);
-	$("#ssstuder").html("少数民族学生总数："+data[0]+"人");
+	$("#ssstuder").html("少数民族学生总数："+data[4]+"人");
 	zb_data["公办学校"][0]=data[0];
 	zb_data["民办学校"][0]=data[1];
 	xrzb('data_zb',zb_data);//渲染公办民办学校占比
