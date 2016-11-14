@@ -167,6 +167,7 @@
 .qkytable td{ color:#8e8e8e;  border-color:#eee; background:#fcfcfc}
 .qkytable td.one{ border-left:1px solid #eee;}
 .qkytable.td_ye td{ background:#fffdf6;}
+.qkytable.tab_bl th{ background:#15b8d4; color:#fff;}
 
 /*N级导航树*/
 
