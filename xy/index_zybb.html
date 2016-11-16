@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>督导统计分析平台</title>
+<!--框架css-->
+<link href="../css/common_3.2.css" rel="stylesheet" type="text/css"/>
+<link href="../css/qkyui3.2.css" rel="stylesheet" type="text/css"/>
+<link href="../css/qkyui_theme_default.css" rel="stylesheet" type="text/css"/>
+<!--附加css-->
+<link href="../css/dudao.css" rel="stylesheet" type="text/css"/>
+<!--公共js-->
+<script language="JavaScript" charset="utf-8" src="../bil/jquery-1.9.1.min.js"></script>
+<script src="../bil/echarts.common.min.js"></script>
+<script language="JavaScript" charset="utf-8" src="../js/qky_ui3.2.js"></script>
+<script language="JavaScript" charset="utf-8" src="../js/ddtj_sel.js"></script>
+
+<script src="../js/tb_h5.js"></script>
+<!--插件js-->
+</head>
+<body class="newsbady">
+    <!--顶部-->
+    <div class="qky_header clear3">
+          <div class="hea_logo fl wd_22"><img src="../images/top/logo2.png"></div>
+          <div class="hea_nav fl wd_50">
+              <a class="hea_navli t_c co_ff trn" href="../index.html"><i class="appicon fz_40">&#xe600;</i><span class="iskuai wd_100 fz_12">基础数据分析</span></a>
+              <a class="hea_navli t_c co_ff trn" href="../zh/index.html"><i class="appicon fz_40">&#xe612;</i><span class="iskuai wd_100 fz_12">综合素质分析</span></a>
+              <a class="hea_navli t_c co_ff trn cur" href="index.html"><i class="appicon fz_40">&#xe633;</i><span class="iskuai wd_100 fz_12">学业水平分析</span></a>
+              <a class="hea_navli t_c co_ff mr0 trn" href="../zc/index.html"><i class="appicon fz_40">&#xe601;</i><span class="iskuai wd_100 fz_12">资产管理分析</span></a>
+          </div>
+          <div class="hea_info fr wd_28"><a>黔南市布依族苗族自治州</a><a>机构</a><a>王小明</a></div> 
+    </div>
+
+
+    <!--中部-->
+    <div class="qky_main clear3">
+      <div class="left_box fl wd_16">
+      	<div class="lr_tit co_79 fz_24 fz_we"><i class="appicon mr10 fz_30">&#xe612;</i>学业水平分析</div>
+        <ul class="left_meun">
+            <li class="zhu cur"><a class="clear3"><em></em><span class="fl">作业情况</span></a></li>
+            <div class="pl16 zibox">
+            <li class="zi"><a href="index.html" class="clear3"><em></em><span class="fl">作业情况分析</span></a></li>
+            <li class="zi cur"><a href="index_zybb.html" class="clear3"><em></em><span class="fl">作业数据报表</span></a></li>
+            </div>
+            <li class="clear3 zhu"><a class="clear3"><em></em><span class="fl">考试情况</span></a></li>
+            <div class="pl16 zibox yc_qing">
+            <li class="zi"><a href="index_ksfx.html" class="clear3"><em></em><span class="fl">考试情况分析</span></a></li>
+            <li class="zi"><a href="index_ksbb.html" class="clear3"><em></em><span class="fl">考试数据报表</span></a></li>
+            </div>
+        </ul>
+      </div>
+      
+      <div class="right_box fr wd_82">
+          <div class="lr_tit clear3">
+          	<span class="fl co_79 fz_24 fz_we">作业情况</span>
+            <div class="qkysel wd_18 mt10 fr ml18">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">某某全通教育学校</a>
+                    <div class="optionbox ba_ff " id="sch">
+                        <a class="option trn dian3">某某学校</a>
+                        <a class="option trn dian3">某某中学</a>
+                    </div>
+                </div>
+            </div>
+            <div class="qkysel wd_14 mt10 fr ml18">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">选择乡镇</a>
+                    <div class="optionbox ba_ff " id="xz">
+                        <a class="option trn dian3">2016-2017学年</a>
+                        <a class="option trn dian3">2016-2017学年</a>
+                    </div>
+                </div>
+            </div>
+            <div class="qkysel wd_12 mt10 fr">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">选择区县</a>
+                    <div class="optionbox ba_ff " id="xj">
+                        <a class="option trn dian3">2016-2017学年</a>
+                        <a class="option trn dian3">2016-2017学年</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+          <div class=" mt20 pb20">
+            <div class="clear3 mb16">
+               <label class="right_tips  co_ye4 brc_ye4 fz_we pa_lr20 fl">作业数据报表</label>
+               <a class="qkybut hbg ba_bl co_ff fz_16 brra_4 fr"><i class="appicon mr4">&#xe609;</i>导出</a>
+               <a class="qkybut hbg ba_bl co_ff fz_16 mr16 brra_4 fr"><i class="appicon mr4">&#xe638;</i>全屏</a>
+            </div>
+          
+            <div class="clear3  pa_tb8">
+                <label class="fl wd_10 fz_18 fz_we co_a2 lh32 t_c">选择科目:</label>
+                <div class="wd_60  clear3 selbut fl">
+                <a><i class="appicon mr4">&#xe604;</i>全部</a>
+                <a class="cur"><i class="appicon mr4">&#xe604;</i>语文</a>
+                <a><i class="appicon mr4">&#xe604;</i>数学</a>
+                <a><i class="appicon mr4">&#xe604;</i>英语</a>
+                <a><i class="appicon mr4">&#xe604;</i>化学</a>
+                <a><i class="appicon mr4">&#xe604;</i>物理</a>
+                <a><i class="appicon mr4">&#xe604;</i>地理</a>
+                <a><i class="appicon mr4">&#xe604;</i>生物</a>
+                <a><i class="appicon mr4">&#xe604;</i>微机</a>
+                </div>
+                <div class="qkysel fr wd_26 box_b">
+                    <div class="selshow inp  wd_100 box_b hicon">
+                        <input type="text" placeholder="作业搜索">
+                        <a class="timeicon co_ye4"><i class="appicon fz_18">&#x343e;</i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <table cellpadding="0" cellspacing="0" border="0" class="qkytable pa_tb16 noline_lr">
+              <tr><th>作业科目</th><th>作业时间</th><th>作业班级</th><th>完成进度</th><th>布置老师</th></tr>
+              <tr><td>语文</td><td>2016-09-21</td><td>小一（1）班</td><td>78%</td><td>王铭铭</td></tr>
+              <tr><td>数学</td><td>2016-09-21</td><td>小一（1）班</td><td>78%</td><td>王铭铭</td></tr>
+              <tr><td>英语</td><td>2016-09-21</td><td>小一（1）班</td><td>78%</td><td>王铭铭</td></tr>
+              <tr><td>化学</td><td>2016-09-21</td><td>小一（1）班</td><td>78%</td><td>王铭铭</td></tr>
+              <tr><td>物理</td><td>2016-09-21</td><td>小一（1）班</td><td>78%</td><td>王铭铭</td></tr>
+              <tr><td>地理</td><td>2016-09-21</td><td>小一（1）班</td><td>78%</td><td>王铭铭</td></tr>
+              <tr><td>生物</td><td>2016-09-21</td><td>小一（1）班</td><td>78%</td><td>王铭铭</td></tr>
+              <tr><td>微机</td><td>2016-09-21</td><td>小一（1）班</td><td>78%</td><td>王铭铭</td></tr>
+                                                                                   
+             
+          </table>
+          <div class="qkypage">
+                   <a href="#" class="no">上一页</a>
+                   <a href="#" class="cur">1</a>
+                   <a href="#">2</a>
+                   <a href="#">3</a>
+                   <a href="#">下一页</a>
+                  </div>
+          
+            
+          </div>
+          
+          
+          
+          
+          
+          
+          
+      </div>
+      
+    </div>
+
+<script src="../js/data.js"></script>
+<script>
+
+$(function(){
+	//下拉选择事件
+	join_option(xzs_sj,"#xj");
+	selup();
+	onebu();
+	zhu();
+
+	
+});
+
+function zhu(){
+	$(".zhu").each(function(i) {
+        $(this).click(function(){
+			$(this).toggleClass("cur").next(".zibox").first().slideToggle(100);
+		});
+    });
+}
+
+
+</script>
+
+</body>
+</html>
