@@ -18,7 +18,7 @@
 .co_ye3{ color:#fff993!important;}/*黄3（淡）*/
 .co_ye4{ color:#fcaa3e!important;}/*黄3（淡）*/
 .co_gr{ color:#5fb364!important;}/*绿*/
-.co_gr2{ color:#98d55b!important;}/*绿2（淡）*/
+.co_gr2{ color:#3ba52d!important;}/*绿2（淡）*/
 .co_or{ color:#ff9f41!important;}/*橘*/
 .co_or2{ color:#fdd010!important;}/*橘2（淡）*/
 .co_red{ color:#ff6f5b !important;}/*红*/
@@ -32,7 +32,7 @@
 .ba_ye3{ background:#fff993!important;}/*黄3（淡）*/
 .ba_ye4{ background:#fcaa3e!important;}/*黄3（淡）*/
 .ba_gr{ background:#5fb364!important;}/*绿*/
-.ba_gr2{ background:#98d55b!important;}/*绿2（淡）*/
+.ba_gr2{ background:#3ba52d!important;}/*绿2（淡）*/
 .ba_or{ background:#ff9f41!important;}/*橘*/
 .ba_or2{ background:#fdd010!important;}/*橘2（淡）*/
 .ba_red{ background:#ff6f5b !important;}/*红*/
@@ -46,7 +46,7 @@
 .brc_ye3{ border-color:#fff993!important;}/*黄3（淡）*/
 .brc_ye4{ border-color:#fcaa3e!important;}/*黄3（淡）*/
 .brc_gr{ border-color:#5fb364!important;}/*绿*/
-.brc_gr2{ border-color:#98d55b!important;}/*绿2（淡）*/
+.brc_gr2{ border-color:#3ba52d!important;}/*绿2（淡）*/
 .brc_or{ border-color:#ff9f41!important;}/*橘*/
 .brc_or2{ border-color:#fdd010!important;}/*橘2（淡）*/
 .brc_red{ border-color:#ff6f5b !important;}/*红*/
@@ -66,7 +66,7 @@
 .qkysel .selshow.onlybt{border:none; border-bottom:1px solid #eee;}
 .qkysel .selshow.inp{ background:#fff;}
 .qkysel .selshow.inp.hicon{ background:#fff;}
-.qkysel .selshow.inp.hicon .timeicon{ color:#9ade55;}
+.qkysel .selshow.inp.hicon .timeicon{ color:#549fc9;}
 .qkysel .selshow.inp.hicon .u_d{color:#9ade55;}
 .qkysel .selshow.inp.hicon .u_d i.noc{ color:#888;}
 .qkysel .selshow.inp input[type='text'],.qkysel .selshow.inp input[type='date']{color:#666; }
@@ -104,6 +104,7 @@
 .qkypage a{ border:1px solid #ddd;background:#fff; color:#666; }
 .qkypage a.cur,.qkypage a:hover{ background:#ffaa3d; color:#fff; border-color:#ffaa3d;}
 .qkypage a.no{ color:#aaa; border-color: #eee; background:#fff;}
+.qkypage.page_bl a.cur,.qkypage a:hover{ background:#549fc9; color:#fff; border-color:#549fc9;}
 
 
 /*弹窗基础颜色风格制定*/
@@ -139,14 +140,14 @@
 .qky_calsel .calselshow.upsel{ background-image: url(../images/public_icon/seliconup.png)}
 .qky_calsel .caloptionbox{background:#fff; border:1px solid #ececec;}
 .qky_calsel .caloptionbox a.option{ color:#777; background:#fff;}
-.qky_calsel .caloptionbox a.option:hover{ background:#9ade55; color:#fff;}
-.qky_calendar .showdate{ color:#9ade55;}
-.qky_cal_tab th{ background:#9ade55; color:#fff; box-shadow:0 2px 4px #c8c8c8;}
+.qky_calsel .caloptionbox a.option:hover{ background:#549fc9; color:#fff;}
+.qky_calendar .showdate{ color:#549fc9;}
+.qky_cal_tab th{ background:#549fc9; color:#fff; box-shadow:0 2px 4px #c8c8c8;}
 .qky_cal_tab td{ color:#666; border-color:#f1f1f1;}
 .qky_cal_tab tr td:first-of-type{ border-left:1px solid #f1f1f1;}
-.qky_cal_tab td .today{ background:#9ade55; color:#fff;}
+.qky_cal_tab td .today{ background:#549fc9; color:#fff;}
 .qky_cal_tab td .oldday{ background:#e6e6e6;}
-.qky_cal_tab td a[type='news']:hover,.qky_cal_tab td a.cur{ background:#9ade55;color:#fff;}
+.qky_cal_tab td a[type='news']:hover,.qky_cal_tab td a.cur{ background:#549fc9;color:#fff;}
 
 
 /*交互导航颜色风格制定*/
@@ -168,6 +169,8 @@
 .qkytable td.one{ border-left:1px solid #eee;}
 .qkytable.td_ye td{ background:#fffdf6;}
 .qkytable.tab_bl th{ background:#15b8d4; color:#fff;}
+.qkytable.tab_ff th{ background:#fff; font-size:18px; color:#b0b0b0; border-bottom:1px solid #ececec;border-top:1px solid #ececec;}
+.qkytable.tab_ff tr.even td{ background:#fff;}
 
 /*N级导航树*/
 

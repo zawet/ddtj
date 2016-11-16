@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>督导统计分析平台</title>
+<!--框架css-->
+<link href="../css/common_3.2.css" rel="stylesheet" type="text/css"/>
+<link href="../css/qkyui3.2.css" rel="stylesheet" type="text/css"/>
+<link href="../css/qkyui_theme_default.css" rel="stylesheet" type="text/css"/>
+<link  href="../css/idangerous.swiper.css" rel="stylesheet" type="text/css"/>
+<!--附加css-->
+<link href="../css/dudao.css" rel="stylesheet" type="text/css"/>
+<!--公共js-->
+<script language="JavaScript" charset="utf-8" src="../bil/jquery-1.9.1.min.js"></script>
+
+<script language="JavaScript" charset="utf-8" src="../js/qky_ui3.2.js"></script>
+<script language="JavaScript" charset="utf-8" src="../js/ddtj_sel.js"></script>
+<script language="JavaScript" charset="utf-8" src="../js/idangerous.swiper.min.js"></script>
+
+<!--插件js-->
+</head>
+<body class="newsbady">
+    <!--顶部-->
+    <div class="qky_header clear3">
+          <div class="hea_logo fl wd_22"><img src="../images/top/logo2.png"></div>
+          <div class="hea_nav fl wd_50">
+              <a class="hea_navli t_c co_ff trn" href="../index.html"><i class="appicon fz_40">&#xe600;</i><span class="iskuai wd_100 fz_12">基础数据分析</span></a>
+              <a class="hea_navli t_c co_ff trn" href="../zh/index.html"><i class="appicon fz_40">&#xe612;</i><span class="iskuai wd_100 fz_12">综合素质分析</span></a>
+              <a class="hea_navli t_c co_ff trn" href="../xy/index.html"><i class="appicon fz_40">&#xe633;</i><span class="iskuai wd_100 fz_12">学业水平分析</span></a>
+              <a class="hea_navli t_c co_ff mr0 trn cur" href="index.html"><i class="appicon fz_40">&#xe601;</i><span class="iskuai wd_100 fz_12">资产管理分析</span></a>
+          </div>
+          <div class="hea_info fr wd_28"><a>黔南市布依族苗族自治州</a><a>机构</a><a>王小明</a></div> 
+    </div>
+
+
+    <!--中部-->
+    <div class="qky_main clear3">
+      <div class="left_box fl wd_16">
+      	<div class="lr_tit co_79 fz_24 fz_we"><i class="appicon mr10 fz_30">&#xe601;</i>资产分析</div>
+        <ul class="left_meun">
+            <li class=""><a class="clear3" href="index.html"><em></em><span class="fl">资产拥有率</span></a></li>
+            <li class="cur"><a class="clear3" href="index_jk.html"><em></em><span class="fl">资产健康率</span></a></li>
+            <li class=""><a class="clear3" href="index_sy.html"><em></em><span class="fl">资产使用情况</span></a></li>
+        </ul>
+      </div>
+      
+      <div class="right_box fr wd_82">
+          <div class="lr_tit clear3">
+          	<span class="fl co_79 fz_24 fz_we">资产数据分析</span>
+            <div class="qkysel wd_18 mt10 fr ml18">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">某某全通教育学校</a>
+                    <div class="optionbox ba_ff " id="sch">
+                        <a class="option trn dian3">某某学校</a>
+                        <a class="option trn dian3">某某中学</a>
+                    </div>
+                </div>
+            </div>
+            <div class="qkysel wd_14 mt10 fr ml18">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">选择乡镇</a>
+                    <div class="optionbox ba_ff " id="xz">
+                        <a class="option trn dian3">2016-2017学年</a>
+                        <a class="option trn dian3">2016-2017学年</a>
+                    </div>
+                </div>
+            </div>
+            <div class="qkysel wd_12 mt10 fr">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">选择区县</a>
+                    <div class="optionbox ba_ff " id="xj">
+                        <a class="option trn dian3">2016-2017学年</a>
+                        <a class="option trn dian3">2016-2017学年</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="clear3 stu_numbox br_b br_eee pb26">
+              <div class="stu_numli fl wd_18">
+                  <div class="up_tit po_r zc"><label>资产损坏总数</label><span class="fz_16">学校资产损坏数量</span></div>
+                  <div class="down_num t_r"><label id="all_stunum">23600</label></div>
+              </div>
+              <div class="stu_numli fl high wd_18">
+                  <div class="up_tit po_r zc"><label>资产健康率</label><span class="fz_16">资产健康率</span></div>
+                  <div class="down_num t_r"><label id="hi_stunum">88%</label></div>
+              </div>
+              <div class="stu_numli fl middle wd_18">
+                  <div class="up_tit po_r zc"><label>资产维修</label><span class="fz_16">资产维修好的数量</span></div>
+                  <div class="down_num t_r"><label id="mi_stunum">2600</label></div>
+              </div>
+              <div class="stu_numli fl primary wd_18">
+                  <div class="up_tit po_r zc"><label>资产报废</label><span class="fz_16">学校资产报废数量</span></div>
+                  <div class="down_num t_r"><label id="pr_stunum">1300</label></div>
+              </div>
+              <div class="stu_numli fl other mr0 wd_18">
+                  <div class="up_tit po_r zc"><label>资产丢失</label><span class="fz_16">学校丢失数量</span></div>
+                  <div class="down_num t_r"><label id="pr_stunum">189</label></div>
+              </div>
+          </div>
+          
+         <div class="clear3 mt20">
+             <div class="fl wd_48">
+                 <div class="clear3">
+                   <label class="right_tips  co_ye4 brc_ye4 fz_we pa_lr20 fl">资产报废视图</label>
+                   <a class="qkybut hbg ba_bl co_ff fz_16 brra_4 fr"><i class="appicon mr4">&#xe609;</i>导出</a>
+                   <a class="qkybut hbg ba_bl co_ff fz_16 mr16 brra_4 fr"><i class="appicon mr4">&#xe638;</i>全屏</a>
+                 </div>
+                 <table cellpadding="0" cellspacing="0" border="0" class="qkytable pa_tb16 noline_lr tab_ff">
+                      <tr><th>资产编号</th><th>资产名称</th><th>报废时间</th></tr>
+                      <tr><td>E069855</td><td>课桌</td><td>2160908</td></tr>
+                      <tr class="even"><td>E069855</td><td>课桌</td><td>2160908</td></tr>
+                      <tr><td>E069855</td><td>课桌</td><td>2160908</td></tr>
+                      <tr class="even"><td>E069855</td><td>课桌</td><td>2160908</td></tr>
+                      <tr><td>E069855</td><td>课桌</td><td>2160908</td></tr>
+                      <tr class="even"><td>E069855</td><td>课桌</td><td>2160908</td></tr>
+                      <tr><td>E069855</td><td>课桌</td><td>2160908</td></tr>
+                      <tr class="even"><td>E069855</td><td>课桌</td><td>2160908</td></tr>
+                  </table>
+                  <div class="qkypage page_bl">
+                   <a href="#" class="no">上一页</a>
+                   <a href="#" class="cur">1</a>
+                   <a href="#">2</a>
+                   <a href="#">3</a>
+                   <a href="#">下一页</a>
+                  </div>
+             </div>
+             <div class="fr wd_48">
+             	<div class="clear3">
+                   <label class="right_tips  co_ye4 brc_ye4 fz_we pa_lr20 fl">维修频率统计</label>
+                   <a class="qkybut hbg ba_bl co_ff fz_16 brra_4 fr"><i class="appicon mr4">&#xe609;</i>导出</a>
+                   <a class="qkybut hbg ba_bl co_ff fz_16 mr16 brra_4 fr"><i class="appicon mr4">&#xe638;</i>全屏</a>
+                 </div>
+                 <table cellpadding="0" cellspacing="0" border="0" class="qkytable pa_tb16 noline_lr tab_ff">
+                      <tr><th>资产编号</th><th>资产名称</th><th>维修次数</th></tr>
+                      <tr><td>E069855</td><td>课桌</td><td>6</td></tr>
+                      <tr class="even"><td>E069855</td><td>课桌</td><td>8</td></tr>
+                      <tr><td>E069855</td><td>课桌</td><td>7</td></tr>
+                      <tr class="even"><td>E069855</td><td>课桌</td><td>9</td></tr>
+                      <tr><td>E069855</td><td>课桌</td><td>11</td></tr>
+                      <tr class="even"><td>E069855</td><td>课桌</td><td>12</td></tr>
+                      <tr><td>E069855</td><td>课桌</td><td>6</td></tr>
+                      <tr class="even"><td>E069855</td><td>课桌</td><td>5</td></tr>
+                  </table>
+                  <div class="qkypage page_bl">
+                   <a href="#" class="no">上一页</a>
+                   <a href="#" class="cur">1</a>
+                   <a href="#">2</a>
+                   <a href="#">3</a>
+                   <a href="#">下一页</a>
+                  </div>
+             </div>
+         </div>
+    
+      </div>
+      
+    </div>
+
+<script src="../js/data.js"></script>
+<script>
+
+
+
+$(function(){
+	//下拉选择事件
+	join_option(xzs_sj,"#xj");
+	selup();
+	onebu();
+	
+});
+
+
+
+</script>
+
+</body>
+</html>

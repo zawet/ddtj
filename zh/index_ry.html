@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>督导统计分析平台</title>
+<!--框架css-->
+<link href="../css/common_3.2.css" rel="stylesheet" type="text/css"/>
+<link href="../css/qkyui3.2.css" rel="stylesheet" type="text/css"/>
+<link href="../css/qkyui_theme_default.css" rel="stylesheet" type="text/css"/>
+<link  href="../css/idangerous.swiper.css" rel="stylesheet" type="text/css"/>
+<!--附加css-->
+<link href="../css/dudao.css" rel="stylesheet" type="text/css"/>
+<!--公共js-->
+<script language="JavaScript" charset="utf-8" src="../bil/jquery-1.9.1.min.js"></script>
+<script src="../bil/echarts.common.min.js"></script>
+<script language="JavaScript" charset="utf-8" src="../js/qky_ui3.2.js"></script>
+<script language="JavaScript" charset="utf-8" src="../js/idangerous.swiper.min.js"></script>
+<script language="JavaScript" charset="utf-8" src="../js/ddtj_sel.js"></script>
+<script src="../js/tb_h5.js"></script>
+<!--插件js-->
+</head>
+<body class="newsbady">
+    <!--顶部-->
+    <div class="qky_header clear3">
+          <div class="hea_logo fl wd_22"><img src="../images/top/logo2.png"></div>
+          <div class="hea_nav fl wd_50">
+              <a class="hea_navli t_c co_ff trn" href="../index.html"><i class="appicon fz_40">&#xe600;</i><span class="iskuai wd_100 fz_12">基础数据分析</span></a>
+              <a class="hea_navli t_c co_ff trn cur" href="index.html"><i class="appicon fz_40">&#xe612;</i><span class="iskuai wd_100 fz_12">综合素质分析</span></a>
+              <a class="hea_navli t_c co_ff trn" href="../xy/index.html"><i class="appicon fz_40">&#xe633;</i><span class="iskuai wd_100 fz_12">学业水平分析</span></a>
+              <a class="hea_navli t_c co_ff mr0 trn" href="../zc/index.html"><i class="appicon fz_40">&#xe601;</i><span class="iskuai wd_100 fz_12">资产管理分析</span></a>
+          </div>
+          <div class="hea_info fr wd_28"><a>黔南市布依族苗族自治州</a><a>机构</a><a>王小明</a></div> 
+    </div>
+
+
+    <!--中部-->
+    <div class="qky_main clear3">
+      <div class="left_box fl wd_16">
+      	<div class="lr_tit co_79 fz_24 fz_we"><i class="appicon mr10 fz_30">&#xe612;</i>综合素质分析</div>
+        <ul class="left_meun">
+            <li class="zhu"><a class="clear3"><em></em><span class="fl">评价分析</span></a></li>
+            <div class="pl16 zibox yc_qing">
+            <li class="zi"><a href="index.html" class="clear3"><em></em><span class="fl">学校总体数据</span></a></li>
+            <li class="zi "><a href="index_bj.html" class="clear3"><em></em><span class="fl">班级个人数据</span></a></li>
+            </div>
+            <li class="clear3 zhu cur"><a class="clear3"><em></em><span class="fl">荣誉分析</span></a></li>
+            <div class="pl16 zibox">
+            <li class="zi cur"><a href="index_ry.html" class="clear3"><em></em><span class="fl">荣誉数据统计</span></a></li>
+            </div>
+        </ul>
+      </div>
+      
+      <div class="right_box fr wd_82">
+          <div class="lr_tit clear3 br_ddd">
+          	<span class="fl co_79 fz_24 fz_we">个人数据分析</span>
+            <div class="qkysel wd_18 mt10 fr ml18">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">某某全通教育学校</a>
+                    <div class="optionbox ba_ff " id="sch">
+                        <a class="option trn dian3">某某学校</a>
+                        <a class="option trn dian3">某某中学</a>
+                    </div>
+                </div>
+            </div>
+            <div class="qkysel wd_14 mt10 fr ml18">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">选择乡镇</a>
+                    <div class="optionbox ba_ff " id="xz">
+                        <a class="option trn dian3">2016-2017学年</a>
+                        <a class="option trn dian3">2016-2017学年</a>
+                    </div>
+                </div>
+            </div>
+            <div class="qkysel wd_12 mt10 fr">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">选择区县</a>
+                    <div class="optionbox ba_ff " id="xj">
+                        <a class="option trn dian3">2016-2017学年</a>
+                        <a class="option trn dian3">2016-2017学年</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+          <div class="ry_box clear3 mb16">
+          	<div class="ry_li fl big po_r">
+            <i class="appicon po_ab_r fz_100">&#xe608;</i>
+            <div class="big_tit po_r"><label>本学年荣誉</label><span>Honor Of This Academic Year</span></div>
+            <div class="big_cont po_r"><i class="appicon">&#xe607;</i><label>1,630</label><span>起</span></div>
+            </div>
+            <div class="ry_li fl po_r"><i class="appicon po_ab_r">&#xe670;</i><em>国家级:</em><label>120</label><span>起</span></div>
+            <div class="ry_li fl po_r"><i class="appicon po_ab_r">&#xe610;</i><em>省级:</em><label>1,320</label><span>起</span></div>
+            <div class="ry_li fl po_r"><i class="appicon po_ab_r">&#xe73c;</i><em>市级:</em><label>320</label><span>起</span></div>
+            <div class="ry_li fl po_r"><i class="appicon po_ab_r">&#xe60d;</i><em>乡级:</em><label>99</label><span>起</span></div>
+          </div>
+          
+          
+          <div class="rydj_box mb26 br_b br_eee pa_tb16 br_t">
+              <div class="clear3 pr16">
+              <label class="right_tips  co_ye4 brc_ye4 fz_we pa_lr20 fl">荣誉按级别统计</label>
+              <a class="qkybut hbg ba_bl co_ff fz_16 brra_4 fr"><i class="appicon mr4">&#xe609;</i>导出</a>
+              <a class="qkybut hbg ba_bl co_ff fz_16 mr16 brra_4 fr"><i class="appicon mr4">&#xe638;</i>全屏</a>
+              </div>
+              <div class="co_ye pa_16">记录各级别荣誉在年级中的分布</div>
+                  <div class="swiper-container wd_96 ma_lrauto">
+                      <div class="swiper-wrapper">
+                          <div class="swiper-slide clear3">
+                              <div class="rydj_li" id="gjry"></div>
+                              <div class="rydj_li" id="sjry"></div>
+                              <div class="rydj_li" id="shijry"></div>
+                          </div>
+                          <div class="swiper-slide">
+                              <div class="rydj_li" id="xjry"></div>
+                              <div class="rydj_li" id="shcry"></div>
+                              <div class="rydj_li" id="classry"></div>
+                          </div>
+                      </div>
+              	  </div>
+              <div class="t_r mt10">
+              <a class="qkybut lk brc_bl co_bl brra_6 mr12 prv">上一页</a>
+              <a class="qkybut lk brc_bl co_bl brra_6 mr12 next">下一页</a>
+              </div>
+          </div>
+          
+          <div class="clear3">
+              <div class="fl wd_50 br_r br_eee">
+                  <div class="clear3 pr16">
+                  	<label class="right_tips  co_ye4 brc_ye4 fz_we pa_lr20 fl">荣誉按年级统计</label>
+                    <a class="qkybut hbg ba_bl co_ff fz_16 brra_4 fr"><i class="appicon mr4">&#xe609;</i>导出</a>
+                	<a class="qkybut hbg ba_bl co_ff fz_16 mr16 brra_4 fr"><i class="appicon mr4">&#xe638;</i>全屏</a>
+                  </div>
+                  <div class="rcpl_sch" id="ry_nj"></div> 
+                  
+              </div>
+              <div class="fr wd_48">
+                  <div class="clear3 pr16">
+                  	<label class="right_tips  co_ye4 brc_ye4 fz_we pa_lr20 fl">荣誉按年级统计</label>
+                    <a class="qkybut hbg ba_bl co_ff fz_16 brra_4 fr"><i class="appicon mr4">&#xe609;</i>导出</a>
+                	<a class="qkybut hbg ba_bl co_ff fz_16 mr16 brra_4 fr"><i class="appicon mr4">&#xe638;</i>全屏</a>
+                  </div>  
+                  <div class="xs_pj" id="xs_pj"></div>
+                  
+              </div>
+          </div>
+            
+      </div>
+      
+    </div>
+
+<script src="../js/data.js"></script>
+<script>
+
+var ry_nj={
+	  "高三":[10,"#f17700"],
+	  "高二":[12,"#ffaa3d"],
+	  "高一":[18,"#ffd83d"],
+	  "初三":[34,"#ec494c"],
+	  "初二":[25,"#d72325"],
+	  "初一":[16,"#ec494c"],
+	  "小六":[18,"#3c83dc"],
+	  "小五":[35,"#379fe0"],
+	  "小四":[24,"#40b3e8"],
+	  "小三":[16,"#18e7d1"],
+	  "小二":[30,"#14b8d4"],
+	  "小一":[17,"#00daff"],
+	  };
+  var xs_pj={
+	  "2014-2015学年":[10,12,13],
+	  "2015-2016学年":[10,14,13],
+	  "2016-2017学年":[11,12,14]
+	  };
+ var rydj={
+	 "国家荣誉":{"高三":[12,"#ffcc00"],"高二":[10,"#ffae00"],"高一":[8,"#ff7e00"],"初三":[9,"#f16000"],"初二":[6,"#f0843c"],"初一":[2,"#f6e17e"]},
+	 "省级荣誉":{"高三":[12,"#4cc1f8"],"高二":[10,"#14b8d4"],"高一":[8,"#2d9be6"],"初三":[9,"#017bce"],"初二":[6,"#2fcae6"],"初一":[2,"#0d8aa0"]},
+	 "市级荣誉":{"高三":[12,"#ff8f00"],"高二":[10,"#ff7418"],"高一":[8,"#ff2929"],"初三":[9,"#ff5400"],"初二":[6,"#f0843c"],"初一":[2,"#f6e17e"]},
+	 "镇级荣誉":{"高三":[12,"#ffcc00"],"高二":[10,"#ffae00"],"高一":[8,"#ff7e00"],"初三":[9,"#f16000"],"初二":[6,"#f0843c"],"初一":[2,"#f6e17e"]},
+	 "学校荣誉":{"高三":[12,"#ff8f00"],"高二":[10,"#ff7418"],"高一":[8,"#ff2929"],"初三":[9,"#ff5400"],"初二":[6,"#f0843c"],"初一":[2,"#f6e17e"]},
+	 "班级荣誉":{"高三":[12,"#4cc1f8"],"高二":[10,"#14b8d4"],"高一":[8,"#2d9be6"],"初三":[9,"#017bce"],"初二":[6,"#2fcae6"],"初一":[2,"#0d8aa0"]}
+	 };
+var mySwiper = new Swiper('.swiper-container',{
+})
+$(function(){
+	//下拉选择事件
+	join_option(xzs_sj,"#xj");
+	selup();
+	onebu();
+	xrrydj("gjry",rydj,0);
+	xrrydj("sjry",rydj,1);
+	xrrydj("shijry",rydj,2);
+	xrrydj("xjry",rydj,3);
+	xrrydj("shcry",rydj,4);
+	xrrydj("classry",rydj,5);
+	
+	xrzh02("ry_nj",ry_nj);
+	xrzh04("xs_pj",xs_pj);
+	zhu();
+	
+	$(".prv").click(function(){mySwiper.swipePrev();});
+	$(".next").click(function(){mySwiper.swipeNext();});
+});
+
+function zhu(){
+	$(".zhu").each(function(i) {
+        $(this).click(function(){
+			$(this).toggleClass("cur").next(".zibox").first().slideToggle(100);
+		});
+    });
+}
+
+</script>
+
+</body>
+</html>

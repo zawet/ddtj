@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>督导统计分析平台</title>
+<!--框架css-->
+<link href="../css/common_3.2.css" rel="stylesheet" type="text/css"/>
+<link href="../css/qkyui3.2.css" rel="stylesheet" type="text/css"/>
+<link href="../css/qkyui_theme_default.css" rel="stylesheet" type="text/css"/>
+<!--附加css-->
+<link href="../css/dudao.css" rel="stylesheet" type="text/css"/>
+<!--公共js-->
+<script language="JavaScript" charset="utf-8" src="../bil/jquery-1.9.1.min.js"></script>
+<script src="../bil/echarts.common.min.js"></script>
+<script language="JavaScript" charset="utf-8" src="../js/qky_ui3.2.js"></script>
+<script language="JavaScript" charset="utf-8" src="../js/ddtj_sel.js"></script>
+<script language="JavaScript" charset="utf-8" src="../js/qkyui_cal_3.2.js"></script>
+<script src="../js/tb_h5.js"></script>
+<!--插件js-->
+</head>
+<body class="newsbady">
+    <!--顶部-->
+    <div class="qky_header clear3">
+          <div class="hea_logo fl wd_22"><img src="../images/top/logo2.png"></div>
+          <div class="hea_nav fl wd_50">
+              <a class="hea_navli t_c co_ff trn" href="../index.html"><i class="appicon fz_40">&#xe600;</i><span class="iskuai wd_100 fz_12">基础数据分析</span></a>
+              <a class="hea_navli t_c co_ff trn" href="../zh/index.html"><i class="appicon fz_40">&#xe612;</i><span class="iskuai wd_100 fz_12">综合素质分析</span></a>
+              <a class="hea_navli t_c co_ff trn cur" href="index.html"><i class="appicon fz_40">&#xe633;</i><span class="iskuai wd_100 fz_12">学业水平分析</span></a>
+              <a class="hea_navli t_c co_ff mr0 trn" href="../zc/index.html"><i class="appicon fz_40">&#xe601;</i><span class="iskuai wd_100 fz_12">资产管理分析</span></a>
+          </div>
+          <div class="hea_info fr wd_28"><a>黔南市布依族苗族自治州</a><a>机构</a><a>王小明</a></div> 
+    </div>
+
+
+    <!--中部-->
+    <div class="qky_main clear3">
+      <div class="left_box fl wd_16">
+      	<div class="lr_tit co_79 fz_24 fz_we"><i class="appicon mr10 fz_30">&#xe612;</i>学业水平分析</div>
+        <ul class="left_meun">
+            <li class="zhu cur"><a class="clear3"><em></em><span class="fl">作业情况</span></a></li>
+            <div class="pl16 zibox yc_qing">
+            <li class="zi"><a href="index.html" class="clear3"><em></em><span class="fl">作业情况分析</span></a></li>
+            <li class="zi "><a href="index_zybb.html" class="clear3"><em></em><span class="fl">作业数据报表</span></a></li>
+            </div>
+            <li class="clear3 zhu"><a class="clear3"><em></em><span class="fl">考试情况</span></a></li>
+            <div class="pl16 zibox ">
+            <li class="zi"><a href="index_ksfx.html" class="clear3"><em></em><span class="fl">考试情况分析</span></a></li>
+            <li class="zi cur"><a href="index_ksbb.html" class="clear3"><em></em><span class="fl">考试数据报表</span></a></li>
+            </div>
+        </ul>
+      </div>
+      
+      <div class="right_box fr wd_82">
+          <div class="lr_tit clear3">
+          	<span class="fl co_79 fz_24 fz_we">考试情况</span>
+            <div class="qkysel wd_18 mt10 fr ml18">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">某某全通教育学校</a>
+                    <div class="optionbox ba_ff " id="sch">
+                        <a class="option trn dian3">某某学校</a>
+                        <a class="option trn dian3">某某中学</a>
+                    </div>
+                </div>
+            </div>
+            <div class="qkysel wd_14 mt10 fr ml18">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">选择乡镇</a>
+                    <div class="optionbox ba_ff " id="xz">
+                        <a class="option trn dian3">2016-2017学年</a>
+                        <a class="option trn dian3">2016-2017学年</a>
+                    </div>
+                </div>
+            </div>
+            <div class="qkysel wd_12 mt10 fr">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">选择区县</a>
+                    <div class="optionbox ba_ff " id="xj">
+                        <a class="option trn dian3">2016-2017学年</a>
+                        <a class="option trn dian3">2016-2017学年</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+          
+          <div class="ks_buts t_c wd_100 pa_tb16 ba_f9 br_b br_eee"><a class="cur one">成绩数据表</a><a class="two">前100名信息表</a></div>
+          
+          
+          
+            <div class="clear3 pa_tb16">
+               <label class="right_tips  co_ye4 brc_ye4 fz_we pa_lr20 fl">考试数据报表</label>
+               <a class="qkybut hbg ba_bl co_ff fz_16 brra_4 fr"><i class="appicon mr4">&#xe609;</i>导出</a>
+               <a class="qkybut hbg ba_bl co_ff fz_16 mr16 brra_4 fr"><i class="appicon mr4">&#xe638;</i>全屏</a>
+            </div>
+          
+            <div class="clear3 br_t br_b br_eee pa_tb20 kssel">
+              <div class="qkysel fl clear3 wd_25">
+                  <div class="seltxt fl co_z9 fz_18">考试类型：</div>
+                  <div class="selshow type2 box_b wd_60 br_ddd fl">
+                      <a class="selectON dian3">期末</a>
+                      <div class="optionbox ba_ff">
+                      <a class="option trn dian3">期末</a>
+                      <a class="option trn dian3">期中</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="qkysel fl clear3 wd_38">
+                  <div class="seltxt fl co_z9 fz_18">考试名称：</div>
+                  <div class="selshow type2 box_b wd_70 br_ddd fl">
+                      <a class="selectON dian3">2016-2017学年上学期期中考试</a>
+                      <div class="optionbox ba_ff">
+                      <a class="option trn dian3">2016-2017学年上学期期中考试</a>
+                      <a class="option trn dian3">2017-2018学年上学期期中考试</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="qkysel fl clear3 wd_28">
+                  <div class="seltxt fl co_z9 fz_18">年级：</div>
+                  <div class="selshow type2 box_b wd_36 br_ddd fl">
+                      <a class="selectON dian3">一年级</a>
+                      <div class="optionbox ba_ff">
+                      <a class="option trn dian3">一年级</a>
+                      <a class="option trn dian3">二年级</a>
+                      </div>
+                  </div>
+                  <div class="selshow type2 box_b wd_36 br_ddd fl ml10">
+                      <a class="selectON dian3">(1)班</a>
+                      <div class="optionbox ba_ff">
+                      <a class="option trn dian3">(1)班</a>
+                      <a class="option trn dian3">(2)班</a>
+                      </div>
+                  </div>
+              </div>
+              <a class="qkybut hbg ba_bl co_ff fz_16 brra_4 fr"><i class="qkyicon mr4">&#xe7f9;</i>刷新</a>
+              </div>
+            
+            <table cellpadding="0" cellspacing="0" border="0" class="qkytable pa_tb16 noline_lr pt0">
+              <tr><th>姓名</th><th>学号</th><th>语文</th><th>数学</th><th>英语</th><th>物理</th><th>生物</th><th>地理</th><th>化学</th><th>总分</th></tr>
+              <tr><td>何倩倩</td><td>20160236233</td><td>89</td><td>63</td><td>98</td><td>75</td><td>87</td><td>69</td><td>89</td><td>586</td></tr>
+              <tr><td>何倩倩</td><td>20160236233</td><td>89</td><td>63</td><td>98</td><td>75</td><td>87</td><td>69</td><td>89</td><td>586</td></tr>
+              <tr><td>何倩倩</td><td>20160236233</td><td>89</td><td>63</td><td>98</td><td>75</td><td>87</td><td>69</td><td>89</td><td>586</td></tr>
+              <tr><td>何倩倩</td><td>20160236233</td><td>89</td><td>63</td><td>98</td><td>75</td><td>87</td><td>69</td><td>89</td><td>586</td></tr>
+              <tr><td>何倩倩</td><td>20160236233</td><td>89</td><td>63</td><td>98</td><td>75</td><td>87</td><td>69</td><td>89</td><td>586</td></tr>
+              <tr><td>何倩倩</td><td>20160236233</td><td>89</td><td>63</td><td>98</td><td>75</td><td>87</td><td>69</td><td>89</td><td>586</td></tr>
+              <tr><td>何倩倩</td><td>20160236233</td><td>89</td><td>63</td><td>98</td><td>75</td><td>87</td><td>69</td><td>89</td><td>586</td></tr>
+              <tr><td>何倩倩</td><td>20160236233</td><td>89</td><td>63</td><td>98</td><td>75</td><td>87</td><td>69</td><td>89</td><td>586</td></tr>
+              <tr><td>何倩倩</td><td>20160236233</td><td>89</td><td>63</td><td>98</td><td>75</td><td>87</td><td>69</td><td>89</td><td>586</td></tr>
+                                                                                                                     
+                                                                                   
+             
+          </table>
+          <div class="qkypage">
+                   <a href="#" class="no">上一页</a>
+                   <a href="#" class="cur">1</a>
+                   <a href="#">2</a>
+                   <a href="#">3</a>
+                   <a href="#">下一页</a>
+                  </div>
+          
+            
+         
+          
+          
+          
+          
+          
+          
+          
+      </div>
+      
+    </div>
+
+<script src="../js/data.js"></script>
+<script>
+
+
+$(function(){
+	//下拉选择事件
+	join_option(xzs_sj,"#xj");
+	selup();
+	onebu();
+	qkysel_fujia(".kssel .qkysel");
+	zhu();
+
+	$(".ks_buts a").each(function(i) {
+        $(this).click(function(){
+			$(this).addClass("cur").siblings().removeClass("cur");
+		});
+    });
+});
+
+function zhu(){
+	$(".zhu").each(function(i) {
+        $(this).click(function(){
+			$(this).toggleClass("cur").next(".zibox").first().slideToggle(100);
+		});
+    });
+}
+
+function  qkysel_fujia(id){
+		$(id).each(function(i) {
+			$(this).find(".optionbox .option").each(function(j) {
+				$(this).click(function(){
+					$(this).parent().slideUp(200).parent().find(".selectON").html($(this).html());
+				}); 
+        	});
+		});
+}
+</script>
+
+</body>
+</html>

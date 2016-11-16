@@ -241,7 +241,7 @@ function xrrxzb(id,datas){
 					avoidLabelOverlap: false,
 					startAngle:-20,
 					center: ['50%', '40%'],
-					label:{normal:{formatter:"{b}\n入学率:{c}%",textStyle:{fontSize:12},show:true}},
+					label:{normal:{formatter:"{b}",textStyle:{fontSize:12},show:true}},
 					labelLine:{normal:{smooth:false,length:8,length2:4}},
 					data:rxzb_values
 				}
@@ -610,4 +610,362 @@ function xrzh03(id,datas){
         // 使用刚指定的配置项和数据显示图表。
         zh03_Chart.setOption(zh03_option);
 }
+function xrzh04(id,datas){
+	var zh04_labels = new Array();
+	var zh04_values_01 = new Array();
+	var zh04_values_02 = new Array();
+	var zh04_values_03 = new Array();
+	for(var key in datas){
+		zh04_labels.push(key);
+		zh04_values_01.push(datas[key][0]);
+		zh04_values_02.push(datas[key][1]);
+		zh04_values_03.push(datas[key][2]);
+		
+	}
+	 
+	//渲染表格（想看明白请看ECharts 3.0官方api） 
+	var zh04_Chart = echarts.init(document.getElementById(id));
+		zh04_option= {
+			tooltip : {trigger:'axis',axisPointer :{type:'shadow'}},
+			legend: {
+			   orient:'vertical',
+        		right:0,
+				top:'30%',
+				data:["高中","初中","小学"]
+			},
+			grid:{left: '0%',right: '16%',bottom: '2%',top: '16%',containLabel: true},
+			yAxis:[{axisTick:{show:false},axisLabel:{show:false,lineStyle:{color:"#eee"}},axisLine:{show:false,lineStyle:{color:"#999"}},type:'value',splitLine:{show:false}}],
+			xAxis:[{axisLabel:{textStyle:{color:"#8e8e8e",fontSize:14}},axisLine:{show:false,lineStyle:{color:"#a4eea9"}},axisTick:{show:false,alignWithLabel:true},
+			type:'category',data:zh04_labels}],
+			series : [
+				{
+					name:'高中',
+					type:'bar',
+					data:zh04_values_01,
+					itemStyle:{normal:{color:"#6ae0e4"}},
+					label:{normal:{show:true,textStyle:{fontSize:14},position:"top"}}
+				},
+				{
+					name:'初中',
+					type:'bar',
+					data:zh04_values_02,
+
+					itemStyle:{normal:{color:"#b5ebed"}},
+					label:{normal:{show:true,textStyle:{fontSize:14},position:"top"}}
+				},
+				{
+					name:'小学',
+					type:'bar',
+					data:zh04_values_03,
+					itemStyle:{normal:{color:"#13b8d4"}},
+					label:{normal:{show:true,textStyle:{fontSize:14},position:"top"}}
+				}
+			]
+	};
+        // 使用刚指定的配置项和数据显示图表。
+        zh04_Chart.setOption(zh04_option);
+}
+
+function xrrydj(id,datas,i){
+	var rydj_labels = new Array();
+	var rydj_labels_2 = new Array();
+	var rydj_values_1= new Array();
+	for(var key in datas){
+		rydj_labels.push(key);	
+	}
+	for(var it in datas[rydj_labels[i]]){
+			rydj_labels_2.push(it);
+			rydj_values_1.push({value:datas[rydj_labels[i]][it][0],name:it,itemStyle:{normal:{color:datas[rydj_labels[i]][it][1]}}});
+		}
+	 
+	//渲染表格（想看明白请看ECharts 3.0官方api） 
+	var rydj_Chart = echarts.init(document.getElementById(id));
+		rydj_option = {
+			title:{text:rydj_labels[i],textStyle:{color:'#939393',fontSize:18},left:'center',top:'center'},
+			tooltip: {
+				trigger: 'item',
+				formatter: "{a} <br/>{b}: {c} ({d}%)"
+			},
+			legend: {
+				orient: 'vertical',
+				right:"4%",
+				top:"16%",
+				data:rydj_labels_2
+			},
+			series: [
+				{
+					name:rydj_labels[i],
+					type:'pie',
+					radius: ['40%', '60%'],
+					center : ['50%', '50%'],
+					avoidLabelOverlap: false,
+					label: {
+						normal: {
+							show: false,
+						},
+						emphasis: {
+							show: true,
+							textStyle: {
+								fontSize: '14'
+							}
+						}
+					},
+					labelLine: {
+						normal: {
+							show: false
+						},
+						emphasis: {
+							show: true
+						}
+					},
+					data:rydj_values_1
+				}
+			]
+		};
+
+		
+        // 使用刚指定的配置项和数据显示图表。
+        rydj_Chart.setOption(rydj_option);
+}
+
+function xrzy_wcl(id,datas){
+	var wcl_labels = new Array();
+	var wcl_values_no = new Array();
+	var wcl_values_yes = new Array();
+	for(var key in datas){
+		wcl_labels.push(key);
+		wcl_values_no.push(datas[key][1]);
+		wcl_values_yes.push(datas[key][0]);
+	}
+	 
+	//渲染表格（想看明白请看ECharts 3.0官方api） 
+	var wcl_Chart = echarts.init(document.getElementById(id));
+		wcl_option = {
+			tooltip : {trigger:'axis',axisPointer :{type : 'shadow'}},
+			legend: {right:10,top:5,data:['已完成','未完成'],textStyle:{color:"#999"},selectedMode:true},
+			grid:{left: '2%',right: '2%',bottom: '2%',top: '17%',containLabel: true},
+			xAxis:[{
+				name:"",
+				nameTextStyle:{color:"#333",fontSize:18},
+				nameGap:14,
+				axisLabel:{textStyle:{color:"#333"},margin:30,formatter: function (value, index){
+					
+					if(value.length>=5&&value.length<=7){
+						return value[0]+value[1]+value[2]+value[3]+"\n"+value[4]+value[5]+value[6]
+					}else{
+						return value
+					}
+					}},
+				axisLine:{lineStyle:{color:"#ffd49d"}},
+				type:'category',
+				data:wcl_labels,
+				axisTick:{alignWithLabel:true,show:false}
+			}],
+			yAxis:[{
+				name:"",
+				nameTextStyle:{color:"#333",fontSize:18},
+				nameGap:14,
+				axisTick:{show:false},
+				axisLabel:{show:true,textStyle:{color:"#333"}},
+				axisLine:{lineStyle:{color:"#ffd49d"}},
+				type:'value',
+				splitLine:{show:true,lineStyle:{color:"#efefef"}}
+				}],
+			series : [
+			{
+					name:'已完成',
+					type:'bar',
+					stack:"zwt",
+					barWidth:"50%",
+					itemStyle:{normal:{color:"#ffa93c"}},
+					data:wcl_values_yes,
+					label:{normal:{show:true,textStyle:{color:"#ffa93c",fontSize:12},position:"bottom"}}
+				},
+				{
+					name:'未完成',
+					type:'bar',
+					stack:"zwt",
+					barWidth:"50%",
+					itemStyle:{normal:{color:"#ec494c"}},
+					data:wcl_values_no,
+					label:{normal:{show:true,textStyle:{color:"#ec494c",fontSize:12},position:"top"}}
+				}
+				
+			]
+	};
+        // 使用刚指定的配置项和数据显示图表。
+        wcl_Chart.setOption(wcl_option);
+}
+
+function xrzy_tj(id,datas){
+	var zytj_labels = new Array();
+	var zytj_values = new Array();
+	for(var key in datas){
+		zytj_labels.push(key);
+		zytj_values.push(datas[key]);
+
+	}
+	 
+	//渲染表格（想看明白请看ECharts 3.0官方api） 
+	var zytj_Chart = echarts.init(document.getElementById(id));
+		
+		zytj_option = {
+			tooltip: {
+				trigger: 'axis',
+				position: function (pt) {
+					return [pt[0], '10%'];
+				}
+			},
+			grid:{left: '2%',right: '2%',bottom: '2%',top: '10%',containLabel: true},
+			xAxis: {
+				type: 'category',
+				boundaryGap: false,
+				data: zytj_labels
+			},
+			yAxis: {
+				name:'作业/次数',
+				nameTextStyle:{fontSize:16, color:"#333"},
+				type: 'value',
+				boundaryGap: [0, '100%']
+			},
+			
+			series: [
+				{
+					name:'作业次数',
+					type:'line',
+					smooth:true,
+					symbol: 'emptyCircle',
+					sampling: 'average',
+					itemStyle: {
+						normal: {
+							color: 'rgb(255, 70, 131)'
+						}
+					},
+					label:{normal:{show:true,textStyle:{color:"#ec494c",fontSize:12},position:"top"}},
+					areaStyle: {
+						normal: {
+							color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+								offset: 0,
+								color: 'rgb(255, 158, 68)'
+							}, {
+								offset: 1,
+								color: 'rgb(255, 70, 131)'
+							}])
+						}
+					},
+					data: zytj_values
+				}
+			]
+		};
+
+        // 使用刚指定的配置项和数据显示图表。
+        zytj_Chart.setOption(zytj_option);
+}
+
+function xrkscj(id,datas){
+	var kscj_labels = new Array();
+	var kscj_values = new Array();
+	for(var key in datas){
+		kscj_labels.push(key);
+		kscj_values.push(datas[key]);
+	}
+	 
+	//渲染表格（想看明白请看ECharts 3.0官方api） 
+	var kscj_Chart = echarts.init(document.getElementById(id));
+		kscj_option= {
+			tooltip : {trigger:'axis',axisPointer :{type : 'shadow'}},
+			legend: {right:10,top:5,data:kscj_labels,textStyle:{color:"#999"},selectedMode:true},
+			grid:{left: '2%',right: '6%',bottom: '2%',top: '10%',containLabel: true},
+			xAxis:[{
+				name:"分数段",
+				nameTextStyle:{color:"#333",fontSize:16},
+				nameGap:14,
+				axisLabel:{textStyle:{color:"#333",fontSize:13}},
+				axisLine:{lineStyle:{color:"#ffd49d"}},
+				type:'category',
+				data:kscj_labels,
+				axisTick:{alignWithLabel:false,show:false}
+			}],
+			yAxis:[{
+				name:"人数",
+				nameTextStyle:{color:"#333",fontSize:16},
+				nameGap:14,
+				axisTick:{show:false},
+				axisLabel:{show:true,textStyle:{color:"#333"}},
+				axisLine:{lineStyle:{color:"#ffd49d"}},
+				type:'value',
+				splitLine:{show:true,lineStyle:{color:"#efefef"}}
+				}],
+			series : [
+			{
+					name:"人数",
+					type:'bar',
+					barWidth:"50%",
+					itemStyle:{normal:{color:"#ffa93c"}},
+					data:kscj_values,
+					label:{normal:{show:true,textStyle:{color:"#ffa93c",fontSize:14},position:"top"}}
+				}
+				
+			]
+	};
+        // 使用刚指定的配置项和数据显示图表。
+        kscj_Chart.setOption(kscj_option);
+}	
+
+function xrksavg(id,datas){
+	var avg_labels = new Array();
+	var avg_values = new Array();
+	for(var key in datas){
+		avg_labels.push(key);
+		avg_values.push(datas[key]);
+	}
+	 
+	//渲染表格（想看明白请看ECharts 3.0官方api） 
+	var avg_Chart = echarts.init(document.getElementById(id));
+		avg_option= {
+			tooltip : {trigger:'axis',axisPointer :{type : 'shadow'}},
+			legend: {right:10,top:5,data:avg_labels,textStyle:{color:"#999"},selectedMode:true},
+			grid:{left: '2%',right: '8%',bottom: '2%',top: '10%',containLabel: true},
+			xAxis:[{
+				name:"班级",
+				nameTextStyle:{color:"#333",fontSize:14},
+				nameGap:14,
+				axisLabel:{textStyle:{color:"#333",fontSize:13}},
+				axisLine:{lineStyle:{color:"#13b8d4"}},
+				type:'category',
+				data:avg_labels,
+				axisTick:{alignWithLabel:false,show:false}
+			}],
+			yAxis:[{
+				name:"平均分",
+				nameTextStyle:{color:"#333",fontSize:14},
+				nameGap:14,
+				axisTick:{show:false},
+				axisLabel:{show:true,textStyle:{color:"#333"}},
+				axisLine:{lineStyle:{color:"#13b8d4"}},
+				type:'value',
+				splitLine:{show:true,lineStyle:{color:"#efefef"}}
+				}],
+			series : [
+			{
+					name:"平均分",
+					type:'bar',
+					barWidth:"50%",
+					itemStyle:{normal:{color:"#13b8d4"}},
+					data:avg_values,
+					label:{normal:{show:true,textStyle:{color:"#13b8d4",fontSize:14},position:"top"}},
+					markLine: {
+						lineStyle:{normal:{color:"#333"}},
+						data: [
+							{type: 'average', name: '基准分'}
+						]
+					}
+				}
+				
+			]
+	};
+        // 使用刚指定的配置项和数据显示图表。
+        avg_Chart.setOption(avg_option);
+}
+	
 	
