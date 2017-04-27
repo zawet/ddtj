@@ -199,9 +199,9 @@
 .zcli_txt{ font-size:12px; color:#fff; width:60%; margin:-10px auto 0; height:20px; line-height:20px; border-radius:20px; text-align:center; background:#c0c0c0;}
 .zcli_num{ text-align:center; color:#c0c0c0; height:36px; line-height:40px; font-size:16px; font-weight:bold;}
 
-.zcli:hover .zcli_icon{ background:#ffaa3d;}
-.zcli:hover .zcli_txt{ background:#ffaa3d;}
-.zcli:hover .zcli_num{ color:#333333;}
+.zcli:hover .zcli_icon,.zcli.active .zcli_icon{ background:#ffaa3d;}
+.zcli:hover .zcli_txt,.zcli.active .zcli_txt{ background:#ffaa3d;}
+.zcli:hover .zcli_num,.zcli.active .zcli_num{ color:#333333;}
 
 
 .zc_nav{ width:100%; padding:12px 0;}

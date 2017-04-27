@@ -643,22 +643,21 @@ function xrzh04(id,datas){
 					type:'bar',
 					data:zh04_values_01,
 					itemStyle:{normal:{color:"#6ae0e4"}},
-					label:{normal:{show:true,textStyle:{fontSize:14},position:"top"}}
+					label:{normal:{show:true,textStyle:{fontSize:14},position:"top",formatter: '{a}:{c}'}}
 				},
 				{
 					name:'初中',
 					type:'bar',
 					data:zh04_values_02,
-
 					itemStyle:{normal:{color:"#b5ebed"}},
-					label:{normal:{show:true,textStyle:{fontSize:14},position:"top"}}
+					label:{normal:{show:true,textStyle:{fontSize:14},position:"top",formatter: '{a}:{c}'}}
 				},
 				{
 					name:'小学',
 					type:'bar',
 					data:zh04_values_03,
 					itemStyle:{normal:{color:"#13b8d4"}},
-					label:{normal:{show:true,textStyle:{fontSize:14},position:"top"}}
+					label:{normal:{show:true,textStyle:{fontSize:14},position:"top",formatter: '{a}:{c}'}}
 				}
 			]
 	};
