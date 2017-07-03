@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>督导统计分析平台</title>
+<!--框架css-->
+<link href="../css/common_3.2.css" rel="stylesheet" type="text/css"/>
+<link href="../css/qkyui3.2.css" rel="stylesheet" type="text/css"/>
+<link href="../css/qkyui_theme_default.css" rel="stylesheet" type="text/css"/>
+<!--附加css-->
+<link href="../css/dudao.css" rel="stylesheet" type="text/css"/>
+<!--公共js-->
+<script language="JavaScript" charset="utf-8" src="../bil/jquery-1.9.1.min.js"></script>
+<script src="../bil/echarts.common.min.js"></script>
+<script language="JavaScript" charset="utf-8" src="../js/qky_ui3.2.js"></script>
+<script language="JavaScript" charset="utf-8" src="../js/ddtj_sel.js"></script>
+<script src="../js/tb_h5.js"></script>
+<!--插件js-->
+</head>
+<body class="newsbady">
+    <!--顶部-->
+    <div class="qky_header clear3">
+          <div class="hea_logo fl wd_22"><img src="../images/top/logo2.png"></div>
+          <div class="hea_nav fl wd_50">
+              <a class="hea_navli t_c co_ff trn" href="../index.html"><i class="appicon fz_40">&#xe600;</i><span class="iskuai wd_100 fz_12">基础数据分析</span></a>
+              <a class="hea_navli t_c co_ff trn " href="../zh/index.html"><i class="appicon fz_40">&#xe612;</i><span class="iskuai wd_100 fz_12">综合素质分析</span></a>
+              <a class="hea_navli t_c co_ff trn" href="../xy/index.html"><i class="appicon fz_40">&#xe633;</i><span class="iskuai wd_100 fz_12">学业水平分析</span></a>
+              <a class="hea_navli t_c co_ff trn" href="../zc/index.html"><i class="appicon fz_40">&#xe601;</i><span class="iskuai wd_100 fz_12">资产管理分析</span></a>
+              <a class="hea_navli t_c co_ff mr0 trn cur" href="index.html"><i class="appicon fz_40">&#xe636;</i><span class="iskuai wd_100 fz_12">微校数据统计</span></a>
+          </div>
+          <div class="hea_info fr wd_28"><a>黔南市布依族苗族自治州</a><a>机构</a><a>王小明</a></div> 
+    </div>
+
+
+    <!--中部-->
+    <div class="qky_main clear3">
+      <div class="left_box fl wd_16">
+      	<div class="lr_tit co_79 fz_24 fz_we"><i class="appicon mr10 fz_30">&#xe636;</i>微校数据统计</div>
+        <ul class="left_meun">
+            <li class="zhu"><a class="clear3" href="index.html"><em></em><span class="fl">学校基本信息</span></a></li>
+            
+            <li class="zhu"><a class="clear3" href="index_wg.html"><em></em><span class="fl">微官网使用情况</span></a></li>
+            <li class="zhu cur"><a class="clear3" href="index_jx.html"><em></em><span class="fl">家校互动使用情况</span></a></li>
+            
+            
+
+        </ul>
+      </div>
+      
+      <div class="right_box fr wd_82">
+          <div class="lr_tit clear3">
+          	<span class="fl co_79 fz_24 fz_we">家校互动使用情况</span>
+            <div class="qkysel wd_18 mt10 fr ml18">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">某某全通教育学校</a>
+                    <div class="optionbox ba_ff " id="sch">
+                        <a class="option trn dian3">某某学校</a>
+                        <a class="option trn dian3">某某中学</a>
+                    </div>
+                </div>
+            </div>
+            <div class="qkysel wd_14 mt10 fr ml18">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">选择乡镇</a>
+                    <div class="optionbox ba_ff " id="xz">
+                        <a class="option trn dian3">2016-2017学年</a>
+                        <a class="option trn dian3">2016-2017学年</a>
+                    </div>
+                </div>
+            </div>
+            <div class="qkysel wd_12 mt10 fr">
+                <div class="selshow box_b wd_100 type2  br_ddd">
+                    <a class="selectON dian3">选择区县</a>
+                    <div class="optionbox ba_ff " id="xj">
+                        <a class="option trn dian3">2016-2017学年</a>
+                        <a class="option trn dian3">2016-2017学年</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="area-statistic"> 
+    <!--顶部筛选条件-->
+    <div class="top-select"> <span class="select_box">数据统计时间选择
+      <select name="select" class="select_list">
+        <option>2017年3月</option>
+        <option>2017年2月</option>
+        <option>2017年1月</option>
+        <option>2016年12月</option>
+        <option>2016年11月</option>
+      </select>
+      </span><span class="ts_txt">以下数据统计截止昨日，今天的新增文章数据将在明天更新</span> </div>
+    <div class="statistic-cell">
+      <div class="statistic-cell-tit"><span class="tit_name">班级圈——3月 区域整体使用情况</span> 
+        <!--导出按钮--> 
+        <span class="export-cell" style="display:"><a href="#" class="btn-all-statistic"><i class="wxicon">&#xe602;</i>导出为Excel</a></span> 
+        <!--导出中--> 
+        <span class="export-cell" style="display:none">
+        <p class="export-ing"><i class="wx-loading export-ing-loading"></i>数据导出中，请等待1分钟，不要关闭页面...</p>
+        </span> 
+        <!--导出失败--> 
+        <span class="export-cell" style="display:none"><b class="export-error">导出失败，请重试</b><a href="#" class="btn-all-statistic"><i class="wxicon">&#xe602;</i>导出为Excel</a></span> 
+        <!--导出成功--> 
+        <span class="export-cell" style="display:none"><a href="#" class="export-down"><i class="wxicon">&#xe638;</i>2017年4月数据表（截止2017年4月19日）</a></span> </div>
+      <div class="statistic-cell-con">
+        <div class="statistic-cell-td-shuju">
+          <ul>
+            <li><span>189</span>班级圈发送人数</li>
+            <li><span>1259</span>班级圈发送次数</li>
+            <li><span>568</span>班级圈点赞次数</li>
+            <li><span>568</span>班级圈评论次数</li>
+          </ul>
+        </div>
+        <div class="statistic-cell-td-tubiao statistic-cell-tdline-l">
+          <div class="tubiao-tit">班级圈次数-区域每日统计图</div>
+          <div class="tubiao-con"><img src="../images/temp-tubiao3.png"></div>
+        </div>
+      </div>
+    </div>
+    <div class="statistic-cell">
+      <div class="statistic-cell-tit"><span class="tit_name">通讯录私信——3月 区域整体使用情况</span> 
+      <!--导出按钮-->
+      <span class="export-cell" style="display:none"><a href="#" class="btn-all-statistic"><i class="wxicon">&#xe602;</i>导出为Excel</a></span>
+       <!--导出中-->
+      <span class="export-cell" style="display:none"><p class="export-ing"><i class="wx-loading export-ing-loading"></i>数据导出中，请等待1分钟，不要关闭页面...</p></span>
+       <!--导出失败-->
+      <span class="export-cell" style="display:"><b class="export-error">导出失败，请重试</b><a href="#" class="btn-all-statistic"><i class="wxicon">&#xe602;</i>导出为Excel</a></span>
+       <!--导出成功-->
+      <span class="export-cell" style="display:none"><a href="#" class="export-down"><i class="wxicon">&#xe638;</i>2017年4月数据表（截止2017年4月19日）</a></span>
+</div>
+      <div class="statistic-cell-con">
+        <div class="statistic-cell-td-shuju">
+          <ul>
+            <li><span>189</span>私信发送人数</li>
+            <li><span>1259</span>私信发送次数</li>
+          </ul>
+        </div>
+        <div class="statistic-cell-td-tubiao statistic-cell-tdline-l">
+          <div class="tubiao-tit">私信次数-区域每日统计图</div>
+          <div class="tubiao-con"><img src="../images/temp-tubiao3.png"></div>
+        </div>
+      </div>
+    </div>
+    <br/>
+  </div>
+          
+          
+          
+          
+         
+          
+      </div>
+      
+    </div>
+
+<script src="../js/data.js"></script>
+<script>
+
+$(function(){
+	//下拉选择事件
+	join_option(xzs_sj,"#xj");
+	selup();
+	onebu();
+	qkysel_fujia(".niji .qkysel");
+
+	
+});
+
+
+function  qkysel_fujia(id){
+		$(id).each(function(i) {
+			$(this).find(".optionbox .option").each(function(j) {
+				$(this).click(function(){
+					$(this).parent().slideUp(200).parent().find(".selectON").html($(this).html());
+				}); 
+        	});
+		});
+}
+</script>
+
+</body>
+</html>
