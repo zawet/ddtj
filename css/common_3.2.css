@@ -482,7 +482,7 @@ background: -moz-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1) 50%, rgba(0,0,0,0)
 .wd_55{ width:55%!important;}
 .wd_54{ width:54%!important;}
 .wd_52{ width:52%!important;}
-.wd_50{ width:50%!important;}
+.wd_50{ width:50%!important; box-sizing:border-box;}
 .wd_48{ width:48%!important;}
 .wd_46{ width:46%!important;}
 .wd_45{ width:45%!important;}
